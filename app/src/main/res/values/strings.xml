@@ -57,6 +57,7 @@
     <string name="calendar_event_detail">Culte en présentiel + live à 10h00</string>
     <string name="calendar_location">6715 16e Ave, Montréal, QC</string>
     <string name="calendar_add_google">Ajouter à Google Agenda</string>
+    <string name="location_button">Voir l’itinéraire</string>
 
     <string name="donation_section_title">Faire un don</string>
     <string name="donation_steps_title">Un parcours simple et sécurisé :</string>
