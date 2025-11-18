@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="512"
+    android:viewportHeight="512">
+    <path
+        android:fillColor="@color/brand_maroon"
+        android:fillAlpha="0.95"
+        android:pathData="M256,32C132.3,32 32,132.3 32,256s100.3,224 224,224 224,-100.3 224,-224S379.7,32 256,32z" />
+    <path
+        android:fillColor="@color/card_veil"
+        android:fillAlpha="0.12"
+        android:pathData="M256,64c-105.9,0 -192,86.1 -192,192 0,105.9 86.1,192 192,192 105.9,0 192,-86.1 192,-192C448,150.1 361.9,64 256,64z" />
+    <path
+        android:fillColor="@color/card_veil"
+        android:pathData="M160,336c50,-20 142,-20 192,0l0,64 -192,0z" />
+    <path
+        android:fillColor="@color/brand_maroon_dark"
+        android:pathData="M188,328c40,-14 96,-14 136,0l0,64 -136,0z" />
+    <path
+        android:fillColor="@color/brand_green"
+        android:pathData="M256,152c-26,0 -48,20 -48,44 0,24 22,44 48,44 26,0 48,-20 48,-44 0,-24 -22,-44 -48,-44z" />
+    <path
+        android:fillColor="@color/brand_maroon_dark"
+        android:pathData="M240,132h32v176h-32z" />
+    <path
+        android:fillColor="@color/brand_green"
+        android:pathData="M208,182c-22,4 -38,20 -38,40 0,8 3,16 7,22 10,-24 24,-46 40,-62 1,-1 0,-3 -1,-4 -2,-1 -5,-2 -8,-2z" />
+    <path
+        android:fillColor="@color/brand_green"
+        android:pathData="M304,182c22,4 38,20 38,40 0,8 -3,16 -7,22 -10,-24 -24,-46 -40,-62 -1,-1 0,-3 1,-4 2,-1 5,-2 8,-2z" />
+    <path
+        android:fillColor="@color/brand_gold"
+        android:pathData="M144,360c0,-8 6,-14 14,-16 82,-20 114,-20 196,0 8,2 14,8 14,16l0,16c0,8 -6,14 -14,14l-196,0c-8,0 -14,-6 -14,-14z" />
+</vector>
