@@ -1,3 +1,29 @@
 <resources>
-    <string name="app_name">eebb</string>
+    <string name="app_name">Bethesda</string>
+    <string name="church_title">Eglise Évangélique Baptiste Bethesda</string>
+    <string name="church_motto">Une communauté qui adore, sert et témoigne</string>
+    <string name="service_times">Cultes : Dimanche 10h00 | Répétition louange : Samedi 18h00</string>
+    <string name="live_button">Live</string>
+    <string name="calendar_button">Calendrier</string>
+    <string name="give_button">Dons</string>
+    <string name="live_section_title">Services en direct</string>
+    <string name="live_section_subtitle">Rejoignez le culte en streaming ou écoutez les enseignements de la semaine.</string>
+    <string name="podcast_button">Ecouter les sermons</string>
+    <string name="upcoming_events_title">Prochains rendez-vous</string>
+    <string name="event_main_title">Culte du dimanche</string>
+    <string name="event_main_time">Chaque dimanche - 10h00</string>
+    <string name="event_main_desc">Louange, enseignement et temps de prière pour toute la famille.</string>
+    <string name="event_prayer_title">Soirée de prière</string>
+    <string name="event_prayer_time">Mercredi - 19h30</string>
+    <string name="event_prayer_desc">Intercession pour l'église, la ville et les besoins personnels.</string>
+    <string name="event_youth_title">Jeunes Bethesda</string>
+    <string name="event_youth_time">Vendredi - 20h00</string>
+    <string name="event_youth_desc">Rencontres dynamiques, groupes de partage et activités.</string>
+    <string name="ministries_title">Ministères en action</string>
+    <string name="ministries_list">Accueil • Louange • Enseignement enfants • Jeunes • Visites • Media &amp; Live</string>
+    <string name="contact_title">Nous contacter</string>
+    <string name="contact_info">Téléphone : 01 23 45 67 89\nEmail : contact@bethesda-eglise.fr\nAdresse : 12 rue de la Grâce, 75000 Paris</string>
+    <string name="contact_button">Email</string>
+    <string name="location_button">Itinéraire</string>
+    <string name="email_subject">Contact depuis l'app Bethesda</string>
 </resources>
