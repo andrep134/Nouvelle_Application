@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_nav_home"
+        android:title="@string/nav_home" />
+    <item
+        android:id="@+id/nav_calendar"
+        android:icon="@drawable/ic_nav_calendar"
+        android:title="@string/nav_calendar" />
+    <item
+        android:id="@+id/nav_media"
+        android:icon="@drawable/ic_nav_media"
+        android:title="@string/nav_media" />
+    <item
+        android:id="@+id/nav_prayer"
+        android:icon="@drawable/ic_nav_prayer"
+        android:title="@string/nav_prayer" />
+    <item
+        android:id="@+id/nav_church"
+        android:icon="@drawable/ic_nav_church"
+        android:title="@string/nav_church" />
+</menu>

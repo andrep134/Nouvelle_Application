@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="brand_maroon">#7A0C0C</color>
-    <color name="brand_maroon_dark">#520606</color>
-    <color name="brand_green">#6AB04F</color>
-    <color name="brand_gold">#C2A25A</color>
-    <color name="sand_background">#F7F1EB</color>
-    <color name="card_veil">#FFFFFF</color>
-    <color name="text_primary">#1E1A19</color>
-    <color name="text_secondary">#4D4745</color>
+    <color name="brand_maroon">#7A0F0F</color>
+    <color name="brand_maroon_dark">#5C0B0B</color>
+    <color name="brand_green">#1E7A2F</color>
+    <color name="brand_gold">#D2A24C</color>
+    <color name="sand_background">#F8F3EC</color>
+    <color name="card_veil">#FFFBF7</color>
+    <color name="text_primary">#1A1411</color>
+    <color name="text_secondary">#544844</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="bottom_nav_unselected">#8C776E</color>
+    <color name="bottom_nav_ripple">#1F7A0F0F</color>
 </resources>

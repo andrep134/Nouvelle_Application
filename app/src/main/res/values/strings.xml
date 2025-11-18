@@ -5,16 +5,19 @@
     <string name="church_motto">"Dieu est fidèle" (1 Cor. 1:9)</string>
     <string name="church_intro">Une communauté qui adore, sert et témoigne à Montréal.</string>
     <string name="service_times">Cultes : Dimanche 10h00 | Répétition louange : Samedi 18h00</string>
+    <string name="hero_tagline">Présence. Excellence. Cœur pour la ville.</string>
 
     <string name="live_button">Lives YouTube</string>
     <string name="calendar_button">Calendrier</string>
     <string name="give_button">Faire un don</string>
 
-    <string name="live_section_title">Rejoignez le direct</string>
-    <string name="live_section_subtitle">Suivez les célébrations, enseignements et temps de prière en streaming.</string>
-    <string name="podcast_button">Voir la chaîne</string>
+    <string name="featured_title">Série en cours : "Espérance vivante"</string>
+    <string name="featured_subtitle">Rejoignez la communauté sur YouTube chaque dimanche en direct.</string>
+    <string name="featured_focus">Message de la semaine</string>
+    <string name="featured_cta">Une liturgie claire, une louange inspirée et un accueil chaleureux pour toute la famille.</string>
+    <string name="watch_now">Regarder maintenant</string>
 
-    <string name="upcoming_events_title">Moments forts</string>
+    <string name="weekly_highlights_title">Moments forts de la semaine</string>
     <string name="event_main_title">Culte du dimanche</string>
     <string name="event_main_time">Chaque dimanche - 10h00</string>
     <string name="event_main_desc">Louange, enseignement et temps de prière pour toute la famille.</string>
@@ -27,19 +30,63 @@
     <string name="event_youth_time">Vendredi - 20h00</string>
     <string name="event_youth_desc">Rencontres dynamiques, groupes de partage et activités.</string>
 
+    <string name="quick_modules_title">Accès rapide</string>
+    <string name="module_events_title">Événements à venir</string>
+    <string name="module_events_desc">Retrouvez les rencontres clé : baptêmes, conférences, retraites.</string>
+    <string name="module_events_pill">Vue calendrier</string>
+    <string name="module_media_title">Derniers messages</string>
+    <string name="module_media_desc">Enseignements, témoignages, capsules de louange et podcasts.</string>
+    <string name="module_media_pill">Playlist YouTube</string>
+    <string name="module_verse_title">Verset du jour</string>
+    <string name="module_verse_text">"L’Éternel est mon berger : je ne manquerai de rien."</string>
+    <string name="module_verse_ref">Psaume 23:1</string>
+    <string name="module_ministries_title">Ministères</string>
+    <string name="module_ministries_desc">Louange, Jeunesse, Prière, Accueil, Media &amp; Live, Mission.</string>
+    <string name="module_ministries_pill">Découvrir</string>
+
+    <string name="media_section_title">Médias et témoignages</string>
+    <string name="media_playlist_title">Playlist live &amp; sermons</string>
+    <string name="media_playlist_desc">Suivez le direct, rattrapez les prédications et partagez-les facilement.</string>
+    <string name="media_live_tag">Live &amp; Replay</string>
+    <string name="media_card_sermon">Série : Espérance vivante</string>
+    <string name="media_card_desc">Pasteur principal • 32 min • Disponible en podcast et vidéo.</string>
+
+    <string name="calendar_section_title">Calendrier EEBB</string>
+    <string name="calendar_section_subtitle">Vue mensuelle avec les temps forts de l’église.</string>
+    <string name="calendar_event_tag">Prochain dimanche</string>
+    <string name="calendar_event_detail">Culte en présentiel + live à 10h00</string>
+    <string name="calendar_location">6715 16e Ave, Montréal, QC</string>
+    <string name="calendar_add_google">Ajouter à Google Agenda</string>
+
+    <string name="donation_section_title">Faire un don</string>
+    <string name="donation_steps_title">Un parcours simple et sécurisé :</string>
+    <string name="donation_step_one">1. Choisissez un montant.</string>
+    <string name="donation_step_two">2. Sélectionnez le mode (CB, Interac, PayPal).</string>
+    <string name="donation_step_three">3. Recevez un reçu automatiquement.</string>
+    <string name="donation_amount_one">25 $</string>
+    <string name="donation_amount_two">50 $</string>
+    <string name="donation_amount_three">100 $</string>
+    <string name="donation_primary">Donner maintenant</string>
+    <string name="donation_qr">Scanner le QR</string>
+
+    <string name="prayer_section_title">Espace prière</string>
+    <string name="prayer_section_desc">Déposez vos requêtes, priez pour la communauté et restez encouragé.</string>
+    <string name="prayer_submit">Soumettre une requête</string>
+    <string name="prayer_read">Lire les prières</string>
+    <string name="prayer_anonymous">Mode anonyme disponible</string>
+
     <string name="ministries_title">Ministères en action</string>
     <string name="ministries_list">Accueil • Louange • Enseignement enfants • Jeunes • Visites • Media &amp; Live • Mission</string>
-
-    <string name="contact_title">Nous contacter</string>
-    <string name="contact_info">Téléphone : (514) 374-5374\nEmail : info@eebbethesda.com\nAdresse : 6715 16e Ave, Montréal, QC</string>
-    <string name="contact_button">Écrire</string>
-    <string name="location_button">Venir</string>
-    <string name="email_subject">Contact depuis l’application Bethesda</string>
-
-    <string name="channel_callout">Chaîne YouTube officielle de l’Église Évangélique Baptiste Béthesda.</string>
-    <string name="connect_section_title">Restons connectés</string>
     <string name="connect_section_subtitle">Retrouvez les annonces, conférences et formations de la semaine.</string>
 
     <string name="contact_email">info@eebbethesda.com</string>
+    <string name="prayer_email">priere@eebbethesda.com</string>
     <string name="location_query">Église Évangélique Baptiste Béthesda Montréal</string>
+    <string name="email_subject">Contact depuis l’application Bethesda</string>
+
+    <string name="nav_home">Accueil</string>
+    <string name="nav_calendar">Calendrier</string>
+    <string name="nav_media">Médias</string>
+    <string name="nav_prayer">Prière</string>
+    <string name="nav_church">Église</string>
 </resources>

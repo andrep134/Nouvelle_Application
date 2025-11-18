@@ -4,29 +4,29 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:background="@drawable/section_card"
-    android:layout_marginBottom="10dp">
+    android:layout_marginBottom="12dp">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/event_youth_title"
-        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
         android:textColor="@color/text_primary"
+        android:textSize="16sp"
         android:textStyle="bold" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="2dp"
+        android:layout_marginTop="4dp"
         android:text="@string/event_youth_time"
-        android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
-        android:textColor="@color/brand_maroon" />
+        android:textColor="@color/brand_maroon"
+        android:textSize="14sp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="6dp"
         android:text="@string/event_youth_desc"
-        android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
-        android:textColor="@color/text_secondary" />
+        android:textColor="@color/text_secondary"
+        android:textSize="13sp" />
 </LinearLayout>

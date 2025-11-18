@@ -3,6 +3,7 @@ package com.example.eebb
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.example.eebb.databinding.ActivityMainBinding
 
@@ -15,28 +16,59 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.liveButton.setOnClickListener {
-            openLink("https://www.youtube.com/@egliseevangeliquebaptisteb4650/featured")
+        binding.liveActionCard.setOnClickListener {
+            openLink(YOUTUBE_URL)
         }
 
-        binding.giveButton.setOnClickListener {
-            openLink("https://www.helloasso.com/associations/eglise-bethesda")
+        binding.watchNowButton.setOnClickListener {
+            openLink(YOUTUBE_URL)
         }
 
-        binding.calendarButton.setOnClickListener {
-            openLink("https://calendar.google.com")
+        binding.mediaWatchNowButton.setOnClickListener {
+            openLink(YOUTUBE_URL)
         }
 
-        binding.podcastButton.setOnClickListener {
-            openLink("https://www.youtube.com/@egliseevangeliquebaptisteb4650/featured")
+        binding.giveActionCard.setOnClickListener {
+            openLink(DONATION_URL)
         }
 
-        binding.contactButton.setOnClickListener {
-            openEmail(getString(R.string.contact_email))
+        binding.donationPrimaryButton.setOnClickListener {
+            openLink(DONATION_URL)
+        }
+
+        binding.donationQrButton.setOnClickListener {
+            openLink(DONATION_URL)
+        }
+
+        binding.calendarActionCard.setOnClickListener {
+            openLink(CALENDAR_URL)
+        }
+
+        binding.calendarGoogleButton.setOnClickListener {
+            openLink(CALENDAR_URL)
         }
 
         binding.locationButton.setOnClickListener {
             openMaps(getString(R.string.location_query))
+        }
+
+        binding.prayerSubmitButton.setOnClickListener {
+            openEmail(getString(R.string.prayer_email), getString(R.string.prayer_submit))
+        }
+
+        binding.prayerReadButton.setOnClickListener {
+            openEmail(getString(R.string.contact_email), getString(R.string.prayer_read))
+        }
+
+        binding.bottomNavigation.setOnItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.nav_home -> scrollToSection(binding.homeContent)
+                R.id.nav_calendar -> scrollToSection(binding.calendarSection)
+                R.id.nav_media -> scrollToSection(binding.mediaSection)
+                R.id.nav_prayer -> scrollToSection(binding.prayerSection)
+                R.id.nav_church -> scrollToSection(binding.ministriesSection)
+            }
+            true
         }
     }
 
@@ -45,11 +77,11 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
-    private fun openEmail(address: String) {
+    private fun openEmail(address: String, subject: String) {
         val intent = Intent(Intent.ACTION_SENDTO).apply {
             data = Uri.parse("mailto:")
             putExtra(Intent.EXTRA_EMAIL, arrayOf(address))
-            putExtra(Intent.EXTRA_SUBJECT, getString(R.string.email_subject))
+            putExtra(Intent.EXTRA_SUBJECT, subject)
         }
         startActivity(intent)
     }
@@ -57,5 +89,17 @@ class MainActivity : AppCompatActivity() {
     private fun openMaps(query: String) {
         val intent = Intent(Intent.ACTION_VIEW, Uri.parse("geo:0,0?q=${'$'}query"))
         startActivity(intent)
+    }
+
+    private fun scrollToSection(target: View) {
+        binding.homeScroll.post {
+            binding.homeScroll.smoothScrollTo(0, target.top)
+        }
+    }
+
+    companion object {
+        private const val YOUTUBE_URL = "https://www.youtube.com/@egliseevangeliquebaptisteb4650/featured"
+        private const val DONATION_URL = "https://www.helloasso.com/associations/eglise-bethesda"
+        private const val CALENDAR_URL = "https://calendar.google.com"
     }
 }

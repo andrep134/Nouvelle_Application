@@ -4,5 +4,5 @@
         android:startColor="@color/brand_maroon"
         android:endColor="@color/brand_maroon_dark"
         android:angle="90" />
-    <corners android:radius="18dp" />
+    <corners android:radius="26dp" />
 </shape>
