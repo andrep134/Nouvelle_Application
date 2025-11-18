@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Bethesda</string>
     <string name="church_title">Eglise Évangélique Baptiste Bethesda</string>
@@ -15,7 +16,7 @@
     <string name="event_main_desc">Louange, enseignement et temps de prière pour toute la famille.</string>
     <string name="event_prayer_title">Soirée de prière</string>
     <string name="event_prayer_time">Mercredi - 19h30</string>
-    <string name="event_prayer_desc">Intercession pour l'église, la ville et les besoins personnels.</string>
+    <string name="event_prayer_desc">Intercession pour l’église, la ville et les besoins personnels.</string>
     <string name="event_youth_title">Jeunes Bethesda</string>
     <string name="event_youth_time">Vendredi - 20h00</string>
     <string name="event_youth_desc">Rencontres dynamiques, groupes de partage et activités.</string>
@@ -25,5 +26,5 @@
     <string name="contact_info">Téléphone : 01 23 45 67 89\nEmail : contact@bethesda-eglise.fr\nAdresse : 12 rue de la Grâce, 75000 Paris</string>
     <string name="contact_button">Email</string>
     <string name="location_button">Itinéraire</string>
-    <string name="email_subject">Contact depuis l'app Bethesda</string>
+    <string name="email_subject">Contact depuis l’application Bethesda</string>
 </resources>
