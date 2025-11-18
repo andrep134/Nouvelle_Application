@@ -8,9 +8,9 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:clipToPadding="false"
         android:orientation="vertical"
-        android:padding="16dp"
-        android:clipToPadding="false">
+        android:padding="16dp">
 
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
@@ -177,7 +177,9 @@
             android:orientation="vertical">
 
             <include layout="@layout/item_event" />
+
             <include layout="@layout/item_prayer" />
+
             <include layout="@layout/item_youth" />
         </LinearLayout>
 
