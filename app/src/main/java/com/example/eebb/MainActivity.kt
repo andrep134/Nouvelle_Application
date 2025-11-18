@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.liveButton.setOnClickListener {
-            openLink("https://www.youtube.com/@BethesdaLive")
+            openLink("https://www.youtube.com/@egliseevangeliquebaptisteb4650/featured")
         }
 
         binding.giveButton.setOnClickListener {
@@ -28,15 +28,15 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.podcastButton.setOnClickListener {
-            openLink("https://open.spotify.com/show/bethesda-sermons")
+            openLink("https://www.youtube.com/@egliseevangeliquebaptisteb4650/featured")
         }
 
         binding.contactButton.setOnClickListener {
-            openEmail("contact@bethesda-eglise.fr")
+            openEmail(getString(R.string.contact_email))
         }
 
         binding.locationButton.setOnClickListener {
-            openMaps("Eglise Evangelique Baptiste Bethesda")
+            openMaps(getString(R.string.location_query))
         }
     }
 
