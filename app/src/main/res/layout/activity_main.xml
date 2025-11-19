@@ -358,7 +358,9 @@
                 android:layout_marginTop="10dp"
                 android:orientation="vertical">
 
-                <include layout="@layout/module_media_card" />
+                <include
+                    android:id="@+id/mediaModule"
+                    layout="@layout/module_media_card" />
             </LinearLayout>
 
             <TextView
@@ -371,7 +373,9 @@
                 android:textColor="@color/brand_maroon"
                 android:textSize="18sp" />
 
-            <include layout="@layout/module_calendar" />
+            <include
+                android:id="@+id/calendarModule"
+                layout="@layout/module_calendar" />
 
             <TextView
                 android:id="@+id/donationSection"
@@ -383,7 +387,9 @@
                 android:textColor="@color/brand_maroon"
                 android:textSize="18sp" />
 
-            <include layout="@layout/module_donation" />
+            <include
+                android:id="@+id/donationModule"
+                layout="@layout/module_donation" />
 
             <TextView
                 android:id="@+id/prayerSection"
@@ -395,7 +401,9 @@
                 android:textColor="@color/brand_maroon"
                 android:textSize="18sp" />
 
-            <include layout="@layout/module_prayer" />
+            <include
+                android:id="@+id/prayerModule"
+                layout="@layout/module_prayer" />
 
             <TextView
                 android:id="@+id/ministriesSection"

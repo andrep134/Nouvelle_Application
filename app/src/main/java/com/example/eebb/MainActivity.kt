@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
             openLink(YOUTUBE_URL)
         }
 
-        binding.mediaWatchNowButton.setOnClickListener {
+        binding.mediaModule.mediaWatchNowButton.setOnClickListener {
             openLink(YOUTUBE_URL)
         }
 
@@ -32,11 +32,11 @@ class MainActivity : AppCompatActivity() {
             openLink(DONATION_URL)
         }
 
-        binding.donationPrimaryButton.setOnClickListener {
+        binding.donationModule.donationPrimaryButton.setOnClickListener {
             openLink(DONATION_URL)
         }
 
-        binding.donationQrButton.setOnClickListener {
+        binding.donationModule.donationQrButton.setOnClickListener {
             openLink(DONATION_URL)
         }
 
@@ -44,19 +44,19 @@ class MainActivity : AppCompatActivity() {
             openLink(CALENDAR_URL)
         }
 
-        binding.calendarGoogleButton.setOnClickListener {
+        binding.calendarModule.calendarGoogleButton.setOnClickListener {
             openLink(CALENDAR_URL)
         }
 
-        binding.locationButton.setOnClickListener {
+        binding.calendarModule.locationButton.setOnClickListener {
             openMaps(getString(R.string.location_query))
         }
 
-        binding.prayerSubmitButton.setOnClickListener {
+        binding.prayerModule.prayerSubmitButton.setOnClickListener {
             openEmail(getString(R.string.prayer_email), getString(R.string.prayer_submit))
         }
 
-        binding.prayerReadButton.setOnClickListener {
+        binding.prayerModule.prayerReadButton.setOnClickListener {
             openEmail(getString(R.string.contact_email), getString(R.string.prayer_read))
         }
 
