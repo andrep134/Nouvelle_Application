@@ -3,8 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="16dp"
     android:fillViewport="true"
-    android:padding="20dp"
     android:animateLayoutChanges="true">
 
     <LinearLayout
@@ -13,25 +13,28 @@
         android:orientation="vertical"
         android:paddingBottom="24dp">
 
+        <!-- HERO -->
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="18dp"
+            android:layout_marginBottom="16dp"
             android:background="@drawable/hero_background"
             app:cardBackgroundColor="@android:color/transparent"
-            app:cardCornerRadius="22dp"
-            app:cardElevation="8dp">
+            app:cardCornerRadius="18dp"
+            app:cardElevation="0dp"
+            app:strokeColor="@color/transparent"
+            app:strokeWidth="0dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:orientation="vertical"
-                android:padding="22dp">
+                android:padding="20dp">
 
                 <ImageView
-                    android:layout_width="88dp"
-                    android:layout_height="88dp"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
                     android:contentDescription="@string/church_title"
                     android:src="@drawable/logo_bethesda" />
 
@@ -41,42 +44,34 @@
                     android:layout_marginTop="12dp"
                     android:gravity="center"
                     android:text="@string/church_title"
-                    android:textColor="@color/white"
+                    android:textColor="@color/color_on_background"
                     android:textSize="18sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-medium" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
                     android:text="@string/church_motto"
-                    android:textColor="@color/brand_gold"
-                    android:textSize="15sp"
-                    android:textStyle="bold" />
+                    android:textColor="@color/color_primary"
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif-medium" />
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:gravity="center"
                     android:text="@string/church_intro"
-                    android:textColor="@color/white"
+                    android:textColor="@color/color_on_surface"
                     android:textSize="13sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:text="@string/service_times"
-                    android:textColor="@color/white"
-                    android:textSize="13sp"
-                    android:textStyle="bold" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
                     android:layout_marginTop="16dp"
+                    android:gravity="center"
                     android:orientation="horizontal">
 
                     <com.google.android.material.button.MaterialButton
@@ -88,9 +83,9 @@
                         android:text="@string/action_live"
                         app:icon="@drawable/ic_nav_media"
                         app:iconPadding="8dp"
-                        app:iconTint="@color/white"
-                        app:backgroundTint="@color/brand_maroon_dark"
-                        app:cornerRadius="14dp" />
+                        app:iconTint="@color/color_on_primary"
+                        app:backgroundTint="@color/color_primary"
+                        app:cornerRadius="12dp" />
 
                     <Space
                         android:layout_width="12dp"
@@ -98,155 +93,237 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/calendarButton"
-                        style="@style/Widget.Material3.Button.TextButton"
+                        style="@style/Widget.Material3.Button.OutlinedButton"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="@string/action_calendar"
                         app:icon="@drawable/ic_nav_calendar"
                         app:iconPadding="10dp"
-                        app:iconTint="@color/white"
-                        app:strokeColor="@color/white"
+                        app:iconTint="@color/color_primary"
+                        app:strokeColor="@color/color_primary"
                         app:strokeWidth="1dp"
-                        app:cornerRadius="14dp"
+                        app:cornerRadius="12dp"
                         app:rippleColor="@color/bottom_nav_ripple" />
                 </LinearLayout>
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 
+        <!-- Quick actions grid -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/dashboard_quick_actions"
-            android:textColor="@color/text_primary"
+            android:textColor="@color/color_on_background"
             android:textSize="18sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-medium" />
 
-        <LinearLayout
+        <androidx.gridlayout.widget.GridLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:orientation="horizontal">
+            android:columnCount="2"
+            android:rowOrderPreserved="false"
+            android:useDefaultMargins="true">
 
-            <com.google.android.material.button.MaterialButton
+            <com.google.android.material.card.MaterialCardView
                 android:id="@+id/giveButton"
-                style="@style/Widget.Material3.Button"
+                style="@style/Widget.Material3.CardView"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="10dp"
-                android:layout_weight="1"
-                android:text="@string/action_give"
-                app:icon="@drawable/ic_heart_hands"
-                app:iconPadding="10dp"
-                app:iconTint="@color/white"
-                app:backgroundTint="@color/brand_green"
-                app:cornerRadius="14dp" />
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:foreground="?attr/selectableItemBackground"
+                app:cardBackgroundColor="@color/color_surface"
+                app:cardElevation="1dp">
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/prayerButton"
-                style="@style/Widget.Material3.Button"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/action_prayer"
-                app:icon="@drawable/ic_nav_prayer"
-                app:iconPadding="10dp"
-                app:iconTint="@color/white"
-                app:backgroundTint="@color/brand_maroon"
-                app:cornerRadius="14dp" />
-        </LinearLayout>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="22dp"
-            android:text="@string/home_next_event"
-            android:textColor="@color/text_primary"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <include
-            android:id="@+id/nextEventCard"
-            layout="@layout/item_event_card" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="@string/home_message_of_week"
-            android:textColor="@color/text_primary"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/sermonCard"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            app:cardBackgroundColor="@color/card_veil"
-            app:cardCornerRadius="20dp"
-            app:cardElevation="8dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="18dp">
-
-                <ImageView
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="160dp"
-                    android:adjustViewBounds="true"
-                    android:background="@drawable/feature_placeholder"
-                    android:contentDescription="@string/media_section_title" />
-
-                <TextView
-                    android:id="@+id/sermonTitle"
-                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
-                    android:textColor="@color/text_primary"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
+                    android:orientation="vertical"
+                    android:padding="14dp">
 
-                <TextView
-                    android:id="@+id/sermonMeta"
-                    android:layout_width="wrap_content"
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_gravity="start"
+                        android:padding="4dp"
+                        android:src="@drawable/ic_nav_church"
+                        android:tint="@color/color_primary" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="@string/action_give"
+                        android:textColor="@color/color_on_background"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:fontFamily="sans-serif-medium" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="@string/quick_action_give_subtitle"
+                        android:textColor="@color/color_secondary_gray"
+                        android:textSize="13sp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/prayerButton"
+                style="@style/Widget.Material3.CardView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:foreground="?attr/selectableItemBackground"
+                app:cardBackgroundColor="@color/color_surface"
+                app:cardElevation="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="6dp"
-                    android:textColor="@color/text_secondary"
-                    android:textSize="13sp" />
+                    android:orientation="vertical"
+                    android:padding="14dp">
 
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/sermonCta"
-                    style="@style/Widget.Material3.Button"
-                    android:layout_width="wrap_content"
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_gravity="start"
+                        android:padding="4dp"
+                        android:src="@drawable/ic_nav_prayer"
+                        android:tint="@color/color_primary" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="@string/action_prayer"
+                        android:textColor="@color/color_on_background"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:fontFamily="sans-serif-medium" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="@string/quick_action_prayer_subtitle"
+                        android:textColor="@color/color_secondary_gray"
+                        android:textSize="13sp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/liveQuick"
+                style="@style/Widget.Material3.CardView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:foreground="?attr/selectableItemBackground"
+                app:cardBackgroundColor="@color/color_surface"
+                app:cardElevation="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:text="@string/media_tag_live"
-                    app:icon="@drawable/ic_play_circle"
-                    app:iconPadding="10dp"
-                    app:iconTint="@color/white"
-                    app:backgroundTint="@color/brand_maroon"
-                    app:cornerRadius="14dp" />
-            </LinearLayout>
-        </com.google.android.material.card.MaterialCardView>
+                    android:orientation="vertical"
+                    android:padding="14dp">
 
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_gravity="start"
+                        android:padding="4dp"
+                        android:src="@drawable/ic_nav_media"
+                        android:tint="@color/color_primary" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="@string/action_live"
+                        android:textColor="@color/color_on_background"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:fontFamily="sans-serif-medium" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="@string/quick_action_live_subtitle"
+                        android:textColor="@color/color_secondary_gray"
+                        android:textSize="13sp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/calendarQuick"
+                style="@style/Widget.Material3.CardView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:foreground="?attr/selectableItemBackground"
+                app:cardBackgroundColor="@color/color_surface"
+                app:cardElevation="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="14dp">
+
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_gravity="start"
+                        android:padding="4dp"
+                        android:src="@drawable/ic_nav_calendar"
+                        android:tint="@color/color_primary" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="@string/action_calendar"
+                        android:textColor="@color/color_on_background"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:fontFamily="sans-serif-medium" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="@string/quick_action_calendar_subtitle"
+                        android:textColor="@color/color_secondary_gray"
+                        android:textSize="13sp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </androidx.gridlayout.widget.GridLayout>
+
+        <!-- Verse of the day -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="18dp"
+            android:layout_marginTop="8dp"
             android:text="@string/home_verse_title"
-            android:textColor="@color/text_primary"
+            android:textColor="@color/color_on_background"
             android:textSize="18sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-medium" />
 
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            app:cardBackgroundColor="@color/sand_tint"
-            app:cardCornerRadius="18dp"
+            android:layout_marginTop="8dp"
+            app:cardBackgroundColor="@color/color_primary_light"
+            app:cardCornerRadius="16dp"
             app:cardElevation="0dp">
 
             <LinearLayout
@@ -257,30 +334,145 @@
 
                 <TextView
                     android:id="@+id/verseText"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/text_primary"
-                    android:textSize="15sp" />
+                    android:textColor="@color/color_on_background"
+                    android:textSize="15sp"
+                    android:fontFamily="sans-serif"
+                    android:textStyle="italic" />
 
                 <TextView
                     android:id="@+id/verseRef"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="6dp"
-                    android:textColor="@color/brand_maroon"
+                    android:textColor="@color/color_primary"
                     android:textSize="13sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-medium" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/viewVerse"
+                    style="@style/Widget.Material3.Button.TextButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/action_view"
+                    app:icon="@drawable/ic_nav_media"
+                    app:iconTint="@color/color_primary"
+                    app:iconPadding="6dp"
+                    app:rippleColor="@color/bottom_nav_ripple"
+                    app:strokeColor="@color/color_primary"
+                    app:strokeWidth="0dp"
+                    android:textColor="@color/color_primary" />
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 
+        <!-- Next event -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="18dp"
-            android:text="@string/home_highlights"
-            android:textColor="@color/text_primary"
+            android:layout_marginTop="16dp"
+            android:text="@string/home_next_event"
+            android:textColor="@color/color_on_background"
             android:textSize="18sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-medium" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/nextEventCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="1dp"
+            app:cardBackgroundColor="@color/color_surface">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/eventTitle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/color_on_background"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:fontFamily="sans-serif-medium" />
+
+                    <TextView
+                        android:id="@+id/eventBadge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/hero_background"
+                        android:paddingHorizontal="10dp"
+                        android:paddingVertical="6dp"
+                        android:text="@string/event_badge_week"
+                        android:textColor="@color/color_primary"
+                        android:textSize="12sp"
+                        android:fontFamily="sans-serif-medium" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/eventSchedule"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:textColor="@color/color_on_surface"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/eventLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:textColor="@color/color_primary"
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif-medium" />
+
+                <TextView
+                    android:id="@+id/eventDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/color_secondary_gray"
+                    android:textSize="13sp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/addToCalendarButton"
+                    style="@style/Widget.Material3.Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/add_to_calendar"
+                    app:backgroundTint="@color/color_primary"
+                    app:cornerRadius="12dp"
+                    app:icon="@drawable/ic_nav_calendar"
+                    app:iconTint="@color/color_on_primary"
+                    app:iconPadding="8dp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Highlights / inspirations -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/home_highlights"
+            android:textColor="@color/color_on_background"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-medium" />
 
         <LinearLayout
             android:id="@+id/highlightContainer"

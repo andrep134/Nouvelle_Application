@@ -7,12 +7,13 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
+import com.example.eebb.auth.AuthManager
 import com.example.eebb.databinding.FragmentHomeBinding
 import com.example.eebb.databinding.ItemHighlightBinding
 import com.example.eebb.ui.common.composeEmail
 import com.example.eebb.ui.common.openLink
 import com.example.eebb.ui.common.openLocation
-import com.example.eebb.ui.model.Sermon
 
 class HomeFragment : Fragment() {
 
@@ -37,17 +38,10 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         viewModel.heroEvent.observe(viewLifecycleOwner) { event ->
-            binding.nextEventCard.eventTitle.text = event.title
-            binding.nextEventCard.eventSchedule.text = event.schedule
-            binding.nextEventCard.eventLocation.text = event.location
-            binding.nextEventCard.eventDescription.text = event.description
-            binding.nextEventCard.addToCalendarButton.setOnClickListener {
-                openLink("https://calendar.google.com")
-            }
-        }
-
-        viewModel.sermons.observe(viewLifecycleOwner) { sermons ->
-            setSermon(sermons.firstOrNull())
+            binding.eventTitle.text = event.title
+            binding.eventSchedule.text = event.schedule
+            binding.eventLocation.text = event.location
+            binding.eventDescription.text = event.description
         }
 
         viewModel.highlights.observe(viewLifecycleOwner) { items ->
@@ -65,17 +59,15 @@ class HomeFragment : Fragment() {
 
         binding.liveButton.setOnClickListener { openLink(YOUTUBE_URL) }
         binding.calendarButton.setOnClickListener { openLink(CALENDAR_URL) }
+        binding.liveQuick.setOnClickListener { openLink(YOUTUBE_URL) }
+        binding.calendarQuick.setOnClickListener { openLink(CALENDAR_URL) }
         binding.giveButton.setOnClickListener { openLink(DONATION_URL) }
-        binding.prayerButton.setOnClickListener { composeEmail(PRAYER_EMAIL, getString(com.example.eebb.R.string.prayer_title)) }
-        binding.sermonCta.setOnClickListener { openLink(YOUTUBE_URL) }
-        binding.nextEventCard.addToCalendarButton.setOnClickListener { openLink(CALENDAR_URL) }
-        binding.nextEventCard.eventLocation.setOnClickListener { openLocation(getString(com.example.eebb.R.string.location_query)) }
-    }
-
-    private fun setSermon(sermon: Sermon?) {
-        sermon ?: return
-        binding.sermonTitle.text = sermon.title
-        binding.sermonMeta.text = "${sermon.speaker} • ${sermon.duration} • ${sermon.publishedOn}"
+        binding.prayerButton.setOnClickListener {
+            requireLogin { composeEmail(PRAYER_EMAIL, getString(com.example.eebb.R.string.prayer_title)) }
+        }
+        binding.addToCalendarButton.setOnClickListener { requireLogin { openLink(CALENDAR_URL) } }
+        binding.eventLocation.setOnClickListener { openLocation(getString(com.example.eebb.R.string.location_query)) }
+        binding.viewVerse.setOnClickListener { openLink(BIBLE_URL) }
     }
 
     override fun onDestroyView() {
@@ -83,10 +75,19 @@ class HomeFragment : Fragment() {
         _binding = null
     }
 
+    private fun requireLogin(action: () -> Unit) {
+        if (AuthManager.currentUser() == null) {
+            findNavController().navigate(com.example.eebb.R.id.nav_login)
+        } else {
+            action()
+        }
+    }
+
     companion object {
         private const val YOUTUBE_URL = "https://www.youtube.com/@egliseevangeliquebaptisteb4650/featured"
         private const val DONATION_URL = "https://www.helloasso.com/associations/eglise-bethesda"
         private const val CALENDAR_URL = "https://calendar.google.com"
         private const val PRAYER_EMAIL = "priere@eebbethesda.com"
+        private const val BIBLE_URL = "https://www.bible.com/fr/bible"
     }
 }

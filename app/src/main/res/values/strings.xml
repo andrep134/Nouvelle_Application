@@ -10,12 +10,18 @@
     <string name="action_calendar">Calendrier</string>
     <string name="action_give">Faire un don</string>
     <string name="action_prayer">Espace prière</string>
+    <string name="action_view">Voir</string>
 
     <string name="dashboard_quick_actions">Actions rapides</string>
+    <string name="quick_action_give_subtitle">Soutenir l’Église en quelques secondes.</string>
+    <string name="quick_action_prayer_subtitle">Partager une requête ou recevoir du soutien.</string>
+    <string name="quick_action_live_subtitle">Rejoindre le direct ou les replays.</string>
+    <string name="quick_action_calendar_subtitle">Consulter les prochaines rencontres.</string>
     <string name="home_next_event">Prochain événement</string>
     <string name="home_message_of_week">Message de la semaine</string>
     <string name="home_verse_title">Verset du jour</string>
     <string name="home_highlights">Moments forts</string>
+    <string name="event_badge_week">Cette semaine</string>
 
     <string name="media_section_title">Médias</string>
     <string name="media_tag_live">Live &amp; replay</string>
@@ -106,4 +112,27 @@
     <string name="media_card_sermon">Message de la semaine</string>
     <string name="media_card_desc">Un enseignement récent de nos pasteurs et invités.</string>
     <string name="watch_now">Regarder maintenant</string>
+
+    <!-- Auth -->
+    <string name="auth_title_login">Connexion</string>
+    <string name="auth_title_register">Créer un compte</string>
+    <string name="auth_title_forgot">Mot de passe oublié</string>
+    <string name="auth_email">Adresse e-mail</string>
+    <string name="auth_password">Mot de passe</string>
+    <string name="auth_confirm_password">Confirmer le mot de passe</string>
+    <string name="auth_login">Se connecter</string>
+    <string name="auth_register">S'inscrire</string>
+    <string name="auth_forgot">Envoyer le lien</string>
+    <string name="auth_no_account">Pas encore de compte ?</string>
+    <string name="auth_have_account">Déjà un compte ?</string>
+    <string name="auth_go_register">Créer mon profil</string>
+    <string name="auth_go_login">Me connecter</string>
+    <string name="auth_remember">Mot de passe oublié ?</string>
+    <string name="auth_reset_sent">Un e-mail de réinitialisation a été envoyé.</string>
+    <string name="auth_missing_fields">Merci de remplir tous les champs.</string>
+    <string name="auth_password_mismatch">Les mots de passe ne correspondent pas.</string>
+    <string name="auth_profile">Profil utilisateur</string>
+    <string name="auth_logout">Se déconnecter</string>
+    <string name="auth_logged_in_as">Connecté en tant que</string>
+    <string name="auth_protected_action">Connectez-vous pour continuer.</string>
 </resources>

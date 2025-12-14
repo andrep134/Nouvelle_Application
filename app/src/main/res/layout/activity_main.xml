@@ -3,20 +3,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/sand_background">
+    android:background="@color/color_background">
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/topAppBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingHorizontal="20dp"
+        android:paddingHorizontal="16dp"
         android:paddingVertical="12dp"
-        android:background="@color/card_veil"
+        android:background="@color/color_background"
         app:title="@string/church_title"
         app:titleCentered="true"
-        app:titleTextColor="@color/text_primary"
+        app:titleTextColor="@color/color_on_background"
         app:navigationIcon="@drawable/ic_nav_church"
-        app:navigationIconTint="@color/brand_maroon" />
+        app:navigationIconTint="@color/color_primary" />
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/nav_host_fragment"
@@ -32,7 +32,7 @@
         android:layout_width="match_parent"
         android:layout_height="88dp"
         android:layout_gravity="bottom"
-        android:background="@color/brand_maroon"
+        android:background="@color/color_surface"
         app:itemIconTint="@color/bottom_nav_selector"
         app:itemRippleColor="@color/bottom_nav_ripple"
         app:itemTextColor="@color/bottom_nav_selector"
