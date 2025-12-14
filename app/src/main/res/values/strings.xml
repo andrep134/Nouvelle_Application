@@ -61,10 +61,13 @@
 
     <string name="prayer_title">Prière</string>
     <string name="prayer_subtitle">Partagez une requête, rejoignez l’équipe d’intercession, recevez un suivi pastoral.</string>
+    <string name="prayer_section_desc">Envoyez une requête ou rejoignez l’équipe d’intercession.</string>
     <string name="prayer_subject">Sujet de prière</string>
     <string name="prayer_description">Décrivez brièvement votre besoin</string>
     <string name="prayer_anonymous">Partager en anonyme</string>
     <string name="prayer_send">Envoyer ma requête</string>
+    <string name="prayer_submit">Soumettre une requête</string>
+    <string name="prayer_read">Lire les requêtes</string>
     <string name="prayer_sent">Merci, votre requête a été transmise à l’équipe de prière.</string>
 
     <string name="donation_steps_title">Comment donner</string>
