@@ -25,9 +25,17 @@
     <string name="module_events_desc">Ce qui arrive prochainement à l’Église.</string>
     <string name="module_events_pill">À venir</string>
 
+    <string name="module_ministries_title">Ministères</string>
+    <string name="module_ministries_desc">Découvrez les équipes qui servent chaque semaine.</string>
+    <string name="module_ministries_pill">Rejoindre</string>
+
     <string name="module_media_title">Médias</string>
     <string name="module_media_desc">Messages récents et replays disponibles.</string>
     <string name="module_media_pill">Nouveau</string>
+
+    <string name="module_verse_title">Verset du jour</string>
+    <string name="module_verse_text">« Que tout ce qui respire loue l’Éternel »</string>
+    <string name="module_verse_ref">Psaume 150:6</string>
 
     <string name="calendar_title">Calendrier / événements</string>
     <string name="calendar_empty">Aucun événement publié pour l’instant.</string>
@@ -59,6 +67,16 @@
     <string name="prayer_send">Envoyer ma requête</string>
     <string name="prayer_sent">Merci, votre requête a été transmise à l’équipe de prière.</string>
 
+    <string name="donation_steps_title">Comment donner</string>
+    <string name="donation_step_one">1. Choisir un montant ci-dessous.</string>
+    <string name="donation_step_two">2. Cliquer sur "Faire un don" pour être redirigé.</string>
+    <string name="donation_step_three">3. Suivre les instructions sur notre page sécurisée.</string>
+    <string name="donation_amount_one">25 $</string>
+    <string name="donation_amount_two">50 $</string>
+    <string name="donation_amount_three">100 $</string>
+    <string name="donation_primary">Faire un don</string>
+    <string name="donation_qr">Scanner le QR code</string>
+
     <string name="church_section_title">Église / À propos</string>
     <string name="church_mission">Mission : aimer Dieu, servir notre prochain et annoncer la Bonne Nouvelle.</string>
     <string name="church_vision">Vision : une Église vivante qui fait des disciples et rayonne dans la ville.</string>
@@ -78,4 +96,11 @@
     <string name="contact_email">info@eebbethesda.com</string>
     <string name="prayer_email">priere@eebbethesda.com</string>
     <string name="email_subject">Contact depuis l’application Bethesda</string>
+
+    <string name="media_playlist_title">Playlist en vedette</string>
+    <string name="media_live_tag">En direct</string>
+    <string name="media_playlist_desc">Derniers messages, louange et replays disponibles en ligne.</string>
+    <string name="media_card_sermon">Message de la semaine</string>
+    <string name="media_card_desc">Un enseignement récent de nos pasteurs et invités.</string>
+    <string name="watch_now">Regarder maintenant</string>
 </resources>
