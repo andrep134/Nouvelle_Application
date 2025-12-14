@@ -13,16 +13,19 @@ object AuthManager {
 
     fun currentUser(): FirebaseUser? = auth.currentUser
 
-    fun ensureFirebase(context: Context) {
-        if (FirebaseApp.getApps(context).isEmpty()) {
-            val app = FirebaseApp.initializeApp(context)
-            if (app == null) {
-                Toast.makeText(
-                    context,
-                    "Configuration Firebase manquante",
-                    Toast.LENGTH_LONG
-                ).show()
+    fun ensureFirebase(context: Context): Boolean {
+        return try {
+            if (FirebaseApp.getApps(context).isEmpty()) {
+                FirebaseApp.initializeApp(context)
             }
+            true
+        } catch (e: Exception) {
+            Toast.makeText(
+                context,
+                "Configuration Firebase manquante",
+                Toast.LENGTH_LONG
+            ).show()
+            false
         }
     }
 

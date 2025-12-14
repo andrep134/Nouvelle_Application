@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
+import com.example.eebb.auth.AuthManager
 import com.example.eebb.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -15,7 +16,16 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
+        AuthManager.ensureFirebase(applicationContext)
+
+        val navHostFragment =
+            supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as? NavHostFragment
+                ?: NavHostFragment.create(R.navigation.nav_graph).also { navHost ->
+                    supportFragmentManager.beginTransaction()
+                        .replace(R.id.nav_host_fragment, navHost)
+                        .setPrimaryNavigationFragment(navHost)
+                        .commitNow()
+                }
         val navController = navHostFragment.navController
 
         binding.bottomNavigation.setupWithNavController(navController)
