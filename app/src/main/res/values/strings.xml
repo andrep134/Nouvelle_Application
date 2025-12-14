@@ -135,4 +135,6 @@
     <string name="auth_logout">Se déconnecter</string>
     <string name="auth_logged_in_as">Connecté en tant que</string>
     <string name="auth_protected_action">Connectez-vous pour continuer.</string>
+    <string name="firebase_config_error">Configuration Firebase manquante ou invalide.</string>
+    <string name="navigation_error">Impossible de charger l'interface. Réessayez.</string>
 </resources>
