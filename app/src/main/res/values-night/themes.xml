@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
     <style name="Theme.Eebb" parent="Theme.Material3.DayNight.NoActionBar">
-        <item name="colorPrimary">@color/brand_maroon</item>
-        <item name="colorOnPrimary">@color/white</item>
-        <item name="colorPrimaryContainer">@color/brand_maroon_dark</item>
-        <item name="colorOnPrimaryContainer">@color/white</item>
-        <item name="colorSecondary">@color/brand_green</item>
-        <item name="colorOnSecondary">@color/white</item>
-        <item name="colorSurface">@color/brand_maroon_dark</item>
-        <item name="android:navigationBarColor">@color/brand_maroon_dark</item>
-        <item name="materialButtonStyle">@style/BethesdaButton</item>
-        <item name="materialCardViewStyle">@style/BethesdaCard</item>
-        <item name="android:textViewStyle">@style/BethesdaText</item>
+        <item name="colorPrimary">@color/color_primary</item>
+        <item name="colorOnPrimary">@color/color_on_primary</item>
+        <item name="colorPrimaryContainer">@color/color_primary_dark</item>
+        <item name="colorOnPrimaryContainer">@color/color_on_primary</item>
+        <item name="colorSecondary">@color/color_secondary_gray</item>
+        <item name="colorOnSecondary">@color/color_on_primary</item>
+        <item name="colorSurface">@color/color_primary_dark</item>
+        <item name="android:navigationBarColor">@color/color_primary_dark</item>
+        <item name="materialButtonStyle">@style/EebbButton</item>
+        <item name="materialCardViewStyle">@style/EebbCard</item>
+        <item name="android:textViewStyle">@style/EebbText</item>
     </style>
 </resources>
