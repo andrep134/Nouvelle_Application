@@ -128,7 +128,7 @@
 
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/giveButton"
-                style="@style/Widget.Material3.MaterialCardView"
+                style="@style/EebbCard"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_columnWeight="1"
@@ -173,7 +173,7 @@
 
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/prayerButton"
-                style="@style/Widget.Material3.MaterialCardView"
+                style="@style/EebbCard"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_columnWeight="1"
@@ -218,7 +218,7 @@
 
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/liveQuick"
-                style="@style/Widget.Material3.MaterialCardView"
+                style="@style/EebbCard"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_columnWeight="1"
@@ -263,7 +263,7 @@
 
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/calendarQuick"
-                style="@style/Widget.Material3.MaterialCardView"
+                style="@style/EebbCard"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_columnWeight="1"
