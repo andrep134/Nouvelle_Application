@@ -27,7 +27,7 @@
         <item name="android:fontFamily">sans-serif-medium</item>
     </style>
 
-    <style name="BethesdaCard" parent="Widget.Material3.MaterialCardView">
+    <style name="BethesdaCard" parent="Widget.MaterialComponents.CardView">
         <item name="cardCornerRadius">22dp</item>
         <item name="cardElevation">6dp</item>
         <item name="cardUseCompatPadding">true</item>
