@@ -3,7 +3,6 @@ package com.example.eebb.auth
 import android.content.Context
 import android.widget.Toast
 import com.google.firebase.FirebaseApp
-import com.google.firebase.FirebaseOptions
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import kotlinx.coroutines.tasks.await
@@ -16,13 +15,14 @@ object AuthManager {
 
     fun ensureFirebase(context: Context) {
         if (FirebaseApp.getApps(context).isEmpty()) {
-            val options = FirebaseOptions.Builder()
-                .setProjectId("eebb-placeholder")
-                .setApplicationId("1:123456789012:android:abcdef123456")
-                .setApiKey("AIzaSyDUMMY-KEY-PLACEHOLDER123456")
-                .setStorageBucket("eebb-placeholder.appspot.com")
-                .build()
-            FirebaseApp.initializeApp(context, options)
+            val app = FirebaseApp.initializeApp(context)
+            if (app == null) {
+                Toast.makeText(
+                    context,
+                    "Configuration Firebase manquante",
+                    Toast.LENGTH_LONG
+                ).show()
+            }
         }
     }
 
