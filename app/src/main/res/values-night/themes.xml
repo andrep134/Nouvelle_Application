@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <style name="Theme.Eebb" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="Theme.Eebb" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="colorPrimary">@color/brand_maroon</item>
-        <item name="colorPrimaryVariant">@color/brand_maroon_dark</item>
         <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimaryContainer">@color/brand_maroon_dark</item>
+        <item name="colorOnPrimaryContainer">@color/white</item>
         <item name="colorSecondary">@color/brand_green</item>
-        <item name="colorSecondaryVariant">@color/brand_green</item>
-        <item name="colorOnSecondary">@color/text_primary</item>
-        <item name="android:statusBarColor">@color/brand_maroon_dark</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorSurface">@color/brand_maroon_dark</item>
         <item name="android:navigationBarColor">@color/brand_maroon_dark</item>
         <item name="materialButtonStyle">@style/BethesdaButton</item>
         <item name="materialCardViewStyle">@style/BethesdaCard</item>
