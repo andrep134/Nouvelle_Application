@@ -121,7 +121,7 @@
     <string name="auth_password">Mot de passe</string>
     <string name="auth_confirm_password">Confirmer le mot de passe</string>
     <string name="auth_login">Se connecter</string>
-    <string name="auth_register">S&apos;inscrire</string>
+    <string name="auth_register">S’inscrire</string>
     <string name="auth_forgot">Envoyer le lien</string>
     <string name="auth_no_account">Pas encore de compte ?</string>
     <string name="auth_have_account">Déjà un compte ?</string>
