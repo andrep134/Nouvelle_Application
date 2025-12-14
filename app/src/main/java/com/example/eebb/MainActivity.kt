@@ -1,10 +1,9 @@
 package com.example.eebb
 
-import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
-import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.setupWithNavController
 import com.example.eebb.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -16,90 +15,16 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.liveActionCard.setOnClickListener {
-            openLink(YOUTUBE_URL)
+        val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
+        val navController = navHostFragment.navController
+
+        binding.bottomNavigation.setupWithNavController(navController)
+        binding.topAppBar.setNavigationOnClickListener {
+            navController.navigate(R.id.nav_church)
         }
 
-        binding.watchNowButton.setOnClickListener {
-            openLink(YOUTUBE_URL)
+        navController.addOnDestinationChangedListener { _, destination, _ ->
+            binding.topAppBar.title = destination.label
         }
-
-        binding.mediaModule.mediaWatchNowButton.setOnClickListener {
-            openLink(YOUTUBE_URL)
-        }
-
-        binding.giveActionCard.setOnClickListener {
-            openLink(DONATION_URL)
-        }
-
-        binding.donationModule.donationPrimaryButton.setOnClickListener {
-            openLink(DONATION_URL)
-        }
-
-        binding.donationModule.donationQrButton.setOnClickListener {
-            openLink(DONATION_URL)
-        }
-
-        binding.calendarActionCard.setOnClickListener {
-            openLink(CALENDAR_URL)
-        }
-
-        binding.calendarModule.calendarGoogleButton.setOnClickListener {
-            openLink(CALENDAR_URL)
-        }
-
-        binding.calendarModule.locationButton.setOnClickListener {
-            openMaps(getString(R.string.location_query))
-        }
-
-        binding.prayerModule.prayerSubmitButton.setOnClickListener {
-            openEmail(getString(R.string.prayer_email), getString(R.string.prayer_submit))
-        }
-
-        binding.prayerModule.prayerReadButton.setOnClickListener {
-            openEmail(getString(R.string.contact_email), getString(R.string.prayer_read))
-        }
-
-        binding.bottomNavigation.setOnItemSelectedListener { item ->
-            when (item.itemId) {
-                R.id.nav_home -> scrollToSection(binding.homeContent)
-                R.id.nav_calendar -> scrollToSection(binding.calendarSection)
-                R.id.nav_media -> scrollToSection(binding.mediaSection)
-                R.id.nav_prayer -> scrollToSection(binding.prayerSection)
-                R.id.nav_church -> scrollToSection(binding.ministriesSection)
-            }
-            true
-        }
-    }
-
-    private fun openLink(url: String) {
-        val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
-        startActivity(intent)
-    }
-
-    private fun openEmail(address: String, subject: String) {
-        val intent = Intent(Intent.ACTION_SENDTO).apply {
-            data = Uri.parse("mailto:")
-            putExtra(Intent.EXTRA_EMAIL, arrayOf(address))
-            putExtra(Intent.EXTRA_SUBJECT, subject)
-        }
-        startActivity(intent)
-    }
-
-    private fun openMaps(query: String) {
-        val intent = Intent(Intent.ACTION_VIEW, Uri.parse("geo:0,0?q=${'$'}query"))
-        startActivity(intent)
-    }
-
-    private fun scrollToSection(target: View) {
-        binding.homeScroll.post {
-            binding.homeScroll.smoothScrollTo(0, target.top)
-        }
-    }
-
-    companion object {
-        private const val YOUTUBE_URL = "https://www.youtube.com/@egliseevangeliquebaptisteb4650/featured"
-        private const val DONATION_URL = "https://www.helloasso.com/associations/eglise-bethesda"
-        private const val CALENDAR_URL = "https://calendar.google.com"
     }
 }
