@@ -21,9 +21,35 @@
     <string name="media_tag_live">Live &amp; replay</string>
     <string name="media_empty">Les enseignements arrivent bientôt.</string>
 
+    <string name="module_events_title">Événements</string>
+    <string name="module_events_desc">Ce qui arrive prochainement à l'Église.</string>
+    <string name="module_events_pill">À venir</string>
+
+    <string name="module_media_title">Médias</string>
+    <string name="module_media_desc">Messages récents et replays disponibles.</string>
+    <string name="module_media_pill">Nouveau</string>
+
     <string name="calendar_title">Calendrier / événements</string>
     <string name="calendar_empty">Aucun événement publié pour l’instant.</string>
     <string name="add_to_calendar">Ajouter au calendrier</string>
+    <string name="calendar_section_subtitle">À ne pas manquer cette semaine</string>
+    <string name="calendar_event_tag">Spécial</string>
+    <string name="calendar_event_detail">Détails de l'événement</string>
+    <string name="calendar_location">Lieu</string>
+    <string name="calendar_add_google">Ajouter à Google Agenda</string>
+    <string name="location_button">Voir l'itinéraire</string>
+
+    <string name="event_main_title">Culte du dimanche</string>
+    <string name="event_main_time">Chaque dimanche à 10h00</string>
+    <string name="event_main_desc">Louange, prière et message pour toute la famille.</string>
+
+    <string name="event_prayer_title">Réunion de prière</string>
+    <string name="event_prayer_time">Mercredi à 19h30</string>
+    <string name="event_prayer_desc">Temps d'intercession et de partage autour de la Parole.</string>
+
+    <string name="event_youth_title">Jeunesse Bethesda</string>
+    <string name="event_youth_time">Vendredi à 20h00</string>
+    <string name="event_youth_desc">Rencontre dynamique pour les jeunes et jeunes adultes.</string>
 
     <string name="prayer_title">Prière</string>
     <string name="prayer_subtitle">Partagez une requête, rejoignez l’équipe d’intercession, recevez un suivi pastoral.</string>
