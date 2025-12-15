@@ -151,6 +151,35 @@
     <string name="auth_logout">Se déconnecter</string>
     <string name="auth_logged_in_as">Connecté en tant que</string>
     <string name="auth_protected_action">Connectez-vous pour continuer.</string>
-    <string name="firebase_config_error">Configuration Firebase manquante ou invalide.</string>
+   
+    
+        <!-- Home Screen hero section -->
+    <string name="hero_welcome_small">Bienvenue</string>
+    <string name="hero_welcome_big">À LA MAISON</string>
+
+    <!-- Last Sermon Section -->
+    <string name="last_sermon_label">Dernier sermon</string>
+    <string name="last_sermon_title">Le pouvoir de la foi</string>
+    <string name="last_sermon_subtitle">Pasteur (à configurer)</string>
+    <string name="watch">Regarder</string>
+
+    <!-- Upcoming Events Section -->
+    <string name="next_events_label">Prochains événements</string>
+    <string name="next_events_title">Culte du dimanche</string>
+    <string name="next_events_time">Dimanche 10h</string>
+
+    <!-- Verse of the Day Section -->
+    <string name="verse_label">Verset du jour</string>
+    <string name="verse_text">Dieu est fidèle, lui qui vous a appelés à la communion de son Fils, Jésus-Christ notre Seigneur.</string>
+    <string name="verse_ref">1 Corinthiens 1:9</string>
+
+    <!-- Placeholder Strings for Live Data -->
+    <string name="placeholder_sermon_title">Aucun sermon pour le moment</string>
+    <string name="placeholder_sermon_subtitle">Revenez bientôt</string>
+    <string name="placeholder_event_title">Aucun événement à venir</string>
+    <string name="placeholder_event_subtitle">Calendrier à venir</string>
+      <string name="placeholder_verse_text">« La parole de Dieu est une lampe à nos pieds.</string>
+    <string name="placeholder_verse_ref">Psaume 119:105</string>
+<string name="firebase_config_error">Configuration Firebase manquante ou invalide.</string>
     <string name="navigation_error">Une erreur est survenue lors du chargement. Veuillez réessayer.</string>
 </resources>
