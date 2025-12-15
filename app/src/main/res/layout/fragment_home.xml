@@ -1,547 +1,149 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
     android:fillViewport="true"
-    android:background="@color/color_background"
-    android:animateLayoutChanges="true">
+    android:background="@color/background_light">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:paddingBottom="24dp">
+        android:padding="16dp">
 
-        <!-- HERO -->
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="18dp"
-            android:background="@android:color/transparent"
-            app:cardBackgroundColor="@android:color/transparent"
-            app:cardCornerRadius="24dp"
-            app:cardElevation="6dp"
-            app:strokeColor="@color/transparent"
+            android:background="@color/bethesda_red"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp"
+            app:cardUseCompatPadding="false"
+            app:cardPreventCornerOverlap="true"
+            app:strokeColor="@color/bethesda_red"
             app:strokeWidth="0dp">
 
-            <FrameLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/home_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="BIENVENUE À LA MAISON"
+                    android:textColor="@color/bethesda_green"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-medium"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="16dp">
+
+            <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/hero_background"
-                android:padding="20dp">
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/hero_overlay" />
+                android:layout_marginBottom="12dp"
+                app:strokeColor="@color/bethesda_red"
+                app:strokeWidth="1dp"
+                app:cardElevation="2dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:padding="4dp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center_vertical"
-                        android:orientation="horizontal">
-
-                        <ImageView
-                            android:layout_width="48dp"
-                            android:layout_height="48dp"
-                            android:adjustViewBounds="true"
-                            android:contentDescription="@string/church_title"
-                            android:scaleType="centerInside"
-                            android:src="@drawable/logo_bethesda" />
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="12dp"
-                            android:layout_weight="1"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/church_title"
-                                android:textColor="@color/color_primary_light"
-                                android:textSize="16sp"
-                                android:textStyle="bold"
-                                android:fontFamily="sans-serif-medium" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="4dp"
-                                android:text="@string/church_motto"
-                                android:textColor="@color/color_soft_beige"
-                                android:textSize="12sp" />
-                        </LinearLayout>
-                    </LinearLayout>
+                    android:padding="16dp">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="16dp"
-                        android:text="@string/home_hero_headline"
-                        android:textColor="@color/color_primary_light"
-                        android:textSize="32sp"
+                        android:text="Dernier Message"
                         android:textStyle="bold"
-                        android:fontFamily="sans-serif-medium" />
+                        android:textSize="18sp"
+                        android:textColor="@color/bethesda_red" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="6dp"
-                        android:text="@string/home_hero_subheadline"
-                        android:textColor="@color/color_soft_beige"
-                        android:textSize="14sp"
-                        android:fontFamily="sans-serif" />
+                        android:layout_marginTop="8dp"
+                        android:text="Découvrez le dernier enseignement inspirant de notre église."
+                        android:textColor="@android:color/black" />
 
-                    <LinearLayout
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:cardBackgroundColor="@color/bethesda_green"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="14dp"
-                        android:gravity="center_vertical"
-                        android:orientation="horizontal">
+                        android:text="Verset du Jour"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:textColor="@color/white" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:background="@drawable/hero_chip"
-                            android:paddingVertical="6dp"
-                            android:paddingHorizontal="12dp"
-                            android:text="@string/service_times"
-                            android:textColor="@color/color_on_primary"
-                            android:textSize="12sp"
-                            android:fontFamily="sans-serif-medium" />
-
-                        <Space
-                            android:layout_width="10dp"
-                            android:layout_height="wrap_content" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:background="@drawable/hero_chip"
-                            android:paddingVertical="6dp"
-                            android:paddingHorizontal="12dp"
-                            android:text="Montréal"
-                            android:textColor="@color/color_on_primary"
-                            android:textSize="12sp"
-                            android:fontFamily="sans-serif-medium" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
+                    <TextView
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="18dp"
-                        android:gravity="center"
-                        android:orientation="horizontal">
+                        android:layout_marginTop="8dp"
+                        android:text="« Car Dieu a tant aimé le monde... »"
+                        android:textColor="@color/white" />
 
-                        <com.google.android.material.button.MaterialButton
-                            android:id="@+id/liveButton"
-                            style="@style/Widget.Material3.Button"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="@string/action_live"
-                            app:icon="@drawable/ic_nav_media"
-                            app:iconPadding="8dp"
-                            app:iconTint="@color/color_on_primary"
-                            app:backgroundTint="@color/color_primary_light"
-                            app:cornerRadius="14dp"
-                            app:rippleColor="@color/bottom_nav_ripple" />
-
-                        <Space
-                            android:layout_width="12dp"
-                            android:layout_height="wrap_content" />
-
-                        <com.google.android.material.button.MaterialButton
-                            android:id="@+id/calendarButton"
-                            style="@style/Widget.Material3.Button.OutlinedButton"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="@string/home_plan_visit"
-                            app:icon="@drawable/ic_nav_calendar"
-                            app:iconPadding="10dp"
-                            app:iconTint="@color/color_primary_light"
-                            app:strokeColor="@color/color_primary_light"
-                            app:strokeWidth="1dp"
-                            app:cornerRadius="14dp"
-                            app:rippleColor="@color/bottom_nav_ripple" />
-                    </LinearLayout>
                 </LinearLayout>
-            </FrameLayout>
-        </com.google.android.material.card.MaterialCardView>
+            </com.google.android.material.card.MaterialCardView>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:text="@string/home_featured_section"
-            android:textColor="@color/color_on_background"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:fontFamily="sans-serif-medium" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/liveQuick"
-                style="@style/Widget.Material3.Button"
-                android:layout_width="0dp"
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/action_live"
-                app:icon="@drawable/ic_nav_media"
-                app:iconTint="@color/color_on_primary"
-                app:backgroundTint="@color/color_primary_light"
-                app:cornerRadius="14dp" />
+                app:cardElevation="2dp">
 
-            <Space
-                android:layout_width="10dp"
-                android:layout_height="wrap_content" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/calendarQuick"
-                style="@style/Widget.Material3.Button.OutlinedButton"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/home_plan_visit"
-                app:icon="@drawable/ic_nav_calendar"
-                app:iconTint="@color/color_primary_light"
-                app:strokeColor="@color/color_primary_light"
-                app:strokeWidth="1dp"
-                app:cornerRadius="14dp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Prochains Événements"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:textColor="@color/bethesda_red" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Restez connectés aux rencontres et activités à venir."
+                        android:textColor="@android:color/black" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
 
         </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/giveButton"
-                style="@style/Widget.Material3.Button"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/give"
-                app:icon="@drawable/ic_heart_hands"
-                app:iconTint="@color/color_on_primary"
-                app:backgroundTint="@color/brand_maroon"
-                app:cornerRadius="14dp" />
-
-            <Space
-                android:layout_width="10dp"
-                android:layout_height="wrap_content" />
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/prayerButton"
-                style="@style/Widget.Material3.Button.OutlinedButton"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/prayer_request"
-                app:icon="@drawable/ic_prayer"
-                app:iconTint="@color/brand_maroon"
-                app:strokeColor="@color/brand_maroon"
-                app:strokeWidth="1dp"
-                app:cornerRadius="14dp" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/highlightContainer"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginBottom="12dp" />
-
-        <com.google.android.material.card.MaterialCardView
-            style="@style/EebbCard"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
-            android:background="@android:color/transparent"
-            app:cardBackgroundColor="@android:color/transparent"
-            app:cardCornerRadius="18dp"
-            app:cardElevation="0dp"
-            app:strokeColor="@color/transparent">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/home_dark_card"
-                android:orientation="vertical"
-                android:padding="18dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/home_latest_sermon"
-                    android:textAllCaps="true"
-                    android:textColor="@color/color_primary_light"
-                    android:textSize="12sp"
-                    android:fontFamily="sans-serif-medium" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="6dp"
-                    android:text="@string/home_latest_sermon_title"
-                    android:textColor="@color/white"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:fontFamily="sans-serif-medium" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:text="@string/home_latest_sermon_desc"
-                    android:textColor="@color/color_soft_beige"
-                    android:textSize="14sp" />
-
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginVertical="14dp"
-                    android:background="@color/color_outline" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="@string/home_media_cta"
-                        android:textColor="@color/color_primary_light"
-                        android:textSize="14sp"
-                        android:fontFamily="sans-serif-medium" />
-
-                    <ImageView
-                        android:layout_width="32dp"
-                        android:layout_height="32dp"
-                        android:contentDescription="@string/home_media_cta"
-                        android:padding="6dp"
-                        android:src="@drawable/ic_play_circle"
-                        android:tint="@color/color_primary_light" />
-                </LinearLayout>
-            </LinearLayout>
-        </com.google.android.material.card.MaterialCardView>
-
-        <com.google.android.material.card.MaterialCardView
-            style="@style/EebbCard"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
-            android:background="@android:color/transparent"
-            app:cardBackgroundColor="@android:color/transparent"
-            app:cardCornerRadius="18dp"
-            app:cardElevation="0dp"
-            app:strokeColor="@color/transparent">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/home_dark_card"
-                android:orientation="vertical"
-                android:padding="18dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/home_upcoming_service"
-                    android:textAllCaps="true"
-                    android:textColor="@color/color_primary_light"
-                    android:textSize="12sp"
-                    android:fontFamily="sans-serif-medium" />
-
-                <TextView
-                    android:id="@+id/eventTitle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="6dp"
-                    android:text="@string/event_main_title"
-                    android:textColor="@color/white"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:fontFamily="sans-serif-medium" />
-
-                <TextView
-                    android:id="@+id/eventSchedule"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:text="@string/home_service_time"
-                    android:textColor="@color/color_soft_beige"
-                    android:textSize="14sp" />
-
-                <TextView
-                    android:id="@+id/eventLocation"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="2dp"
-                    android:text="@string/home_upcoming_service_desc"
-                    android:textColor="@color/color_soft_beige"
-                    android:textSize="14sp" />
-
-                <TextView
-                    android:id="@+id/eventDescription"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="@string/home_upcoming_service_desc"
-                    android:textColor="@color/color_soft_beige"
-                    android:textSize="14sp" />
-
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/addToCalendarButton"
-                    style="@style/Widget.Material3.Button.TextButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
-                    android:text="@string/add_to_calendar"
-                    app:cornerRadius="12dp"
-                    app:icon="@drawable/ic_calendar_star"
-                    app:iconPadding="10dp"
-                    app:iconTint="@color/color_primary_light"
-                    app:rippleColor="@color/bottom_nav_ripple"
-                    app:strokeColor="@color/color_primary_light"
-                    app:strokeWidth="1dp" />
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginVertical="14dp"
-                    android:background="@color/color_outline" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="@string/home_service_cta"
-                        android:textColor="@color/color_primary_light"
-                        android:textSize="14sp"
-                        android:fontFamily="sans-serif-medium" />
-
-                    <ImageView
-                        android:layout_width="32dp"
-                        android:layout_height="32dp"
-                        android:contentDescription="@string/home_service_cta"
-                        android:padding="6dp"
-                        android:src="@drawable/ic_calendar_star"
-                        android:tint="@color/color_primary_light" />
-                </LinearLayout>
-            </LinearLayout>
-        </com.google.android.material.card.MaterialCardView>
-
-        <com.google.android.material.card.MaterialCardView
-            style="@style/EebbCard"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/transparent"
-            app:cardBackgroundColor="@android:color/transparent"
-            app:cardCornerRadius="18dp"
-            app:cardElevation="0dp"
-            app:strokeColor="@color/transparent">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/home_dark_card"
-                android:orientation="vertical"
-                android:padding="18dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/home_verse_title"
-                    android:textAllCaps="true"
-                    android:textColor="@color/color_primary_light"
-                    android:textSize="12sp"
-                    android:fontFamily="sans-serif-medium" />
-
-                <TextView
-                    android:id="@+id/verseText"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="@string/module_verse_text"
-                    android:textColor="@color/white"
-                    android:textSize="18sp"
-                    android:fontFamily="sans-serif-medium" />
-
-                <TextView
-                    android:id="@+id/verseRef"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:text="@string/module_verse_ref"
-                    android:textColor="@color/color_soft_beige"
-                    android:textSize="14sp"
-                    android:fontFamily="sans-serif-medium" />
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginVertical="14dp"
-                    android:background="@color/color_outline" />
-
-                <LinearLayout
-                    android:id="@+id/viewVerse"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="@string/home_verse_cta"
-                        android:textColor="@color/color_primary_light"
-                        android:textSize="14sp"
-                        android:fontFamily="sans-serif-medium" />
-
-                    <ImageView
-                        android:layout_width="32dp"
-                        android:layout_height="32dp"
-                        android:contentDescription="@string/home_verse_cta"
-                        android:padding="6dp"
-                        android:src="@drawable/ic_heart_hands"
-                        android:tint="@color/color_primary_light" />
-                </LinearLayout>
-            </LinearLayout>
-        </com.google.android.material.card.MaterialCardView>
 
     </LinearLayout>
-
-</androidx.core.widget.NestedScrollView>
+</ScrollView>
