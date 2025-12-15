@@ -12,7 +12,7 @@
         <item name="android:fontFamily">sans-serif</item>
         <item name="materialCardViewStyle">@style/BethesdaCard</item>
         <item name="toolbarStyle">@style/BethesdaToolbar</item>
-        <item name="navigationBarDividerColor">@color/background_light</item>
+        <item name="android:navigationBarDividerColor">@color/background_light</item>
         <item name="android:statusBarContrastEnforced">false</item>
     </style>
 
