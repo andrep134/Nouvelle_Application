@@ -26,6 +26,8 @@
     <string name="action_give">Faire un don</string>
     <string name="action_prayer">Espace prière</string>
     <string name="action_view">Voir</string>
+    <string name="give">Faire un don</string>
+    <string name="prayer_request">Requête de prière</string>
 
     <string name="dashboard_quick_actions">Actions rapides</string>
     <string name="quick_action_give_subtitle">Soutenir l’Église en quelques secondes.</string>
