@@ -2,43 +2,41 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/nav_home">
+    app:startDestination="@id/navigation_home">
 
     <fragment
-        android:id="@+id/nav_home"
+        android:id="@+id/navigation_home"
         android:name="com.example.eebb.ui.home.HomeFragment"
-        android:label="@string/nav_home" />
+        android:label="Accueil" />
+
     <fragment
-        android:id="@+id/nav_calendar"
-        android:name="com.example.eebb.ui.calendar.CalendarFragment"
-        android:label="@string/nav_calendar" />
+        android:id="@+id/navigation_sermons"
+        android:name="com.example.eebb.ui.sermons.SermonsFragment"
+        android:label="Sermons" />
+
     <fragment
-        android:id="@+id/nav_media"
-        android:name="com.example.eebb.ui.media.MediaFragment"
-        android:label="@string/nav_media" />
+        android:id="@+id/navigation_events"
+        android:name="com.example.eebb.ui.events.EventsFragment"
+        android:label="Agenda" />
+
     <fragment
-        android:id="@+id/nav_prayer"
-        android:name="com.example.eebb.ui.prayer.PrayerFragment"
-        android:label="@string/nav_prayer" />
-    <fragment
-        android:id="@+id/nav_church"
-        android:name="com.example.eebb.ui.church.ChurchFragment"
-        android:label="@string/nav_church" />
+        android:id="@+id/navigation_give"
+        android:name="com.example.eebb.ui.give.GiveFragment"
+        android:label="Dons" />
 
     <fragment
         android:id="@+id/nav_login"
         android:name="com.example.eebb.ui.auth.LoginFragment"
-        android:label="@string/auth_title_login" />
+        android:label="Connexion" />
+
     <fragment
         android:id="@+id/nav_register"
         android:name="com.example.eebb.ui.auth.RegisterFragment"
-        android:label="@string/auth_title_register" />
+        android:label="Inscription" />
+
     <fragment
         android:id="@+id/nav_forgot"
         android:name="com.example.eebb.ui.auth.ForgotPasswordFragment"
-        android:label="@string/auth_title_forgot" />
-    <fragment
-        android:id="@+id/nav_profile"
-        android:name="com.example.eebb.ui.auth.ProfileFragment"
-        android:label="@string/auth_profile" />
+        android:label="Mot de passe oublié" />
+
 </navigation>

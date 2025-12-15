@@ -1,43 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <style name="Theme.Eebb" parent="Theme.Material3.Light.NoActionBar">
-        <item name="colorPrimary">@color/color_primary</item>
-        <item name="colorOnPrimary">@color/color_on_primary</item>
-        <item name="colorPrimaryContainer">@color/color_primary_light</item>
-        <item name="colorOnPrimaryContainer">@color/color_on_background</item>
-        <item name="colorSecondary">@color/color_secondary_gray</item>
-        <item name="colorOnSecondary">@color/color_on_primary</item>
-        <item name="colorSurface">@color/color_surface</item>
-        <item name="colorSurfaceContainer">@color/color_background</item>
-        <item name="android:statusBarColor">@color/color_primary_dark</item>
+    <style name="Theme.Eebb" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/bethesda_red</item>
+        <item name="colorSecondary">@color/bethesda_green</item>
+        <item name="android:statusBarColor">@color/bethesda_red</item>
         <item name="android:windowLightStatusBar">false</item>
-        <item name="android:navigationBarColor">@color/color_background</item>
-        <item name="materialButtonStyle">@style/EebbButton</item>
-        <item name="materialCardViewStyle">@style/EebbCard</item>
-        <item name="android:textViewStyle">@style/EebbText</item>
-        <item name="android:colorBackground">@color/color_background</item>
-        <item name="textAppearanceHeadline6">@style/EebbHeadline</item>
-    </style>
-
-    <style name="EebbButton" parent="Widget.Material3.Button">
-        <item name="cornerRadius">12dp</item>
-        <item name="android:textAllCaps">false</item>
-        <item name="android:fontFamily">sans-serif-medium</item>
-    </style>
-
-    <style name="EebbCard" parent="Widget.MaterialComponents.CardView">
-        <item name="cardCornerRadius">16dp</item>
-        <item name="cardElevation">2dp</item>
-        <item name="cardUseCompatPadding">true</item>
-    </style>
-
-    <style name="EebbText" parent="@android:style/TextAppearance.Material.Body1">
-        <item name="android:textColor">@color/color_on_surface</item>
+        <item name="android:colorBackground">@color/background_light</item>
+        <item name="android:navigationBarColor">@color/background_light</item>
+        <item name="android:windowLightNavigationBar">true</item>
+        <item name="android:textColor">@color/bethesda_red</item>
         <item name="android:fontFamily">sans-serif</item>
+        <item name="materialCardViewStyle">@style/BethesdaCard</item>
+        <item name="toolbarStyle">@style/BethesdaToolbar</item>
+        <item name="navigationBarDividerColor">@color/background_light</item>
+        <item name="android:statusBarContrastEnforced">false</item>
     </style>
 
-    <style name="EebbHeadline" parent="@android:style/TextAppearance.Material.Headline">
-        <item name="android:textColor">@color/color_on_background</item>
+    <style name="BethesdaCard" parent="Widget.Material3.CardView.Elevated">
+        <item name="cardCornerRadius">16dp</item>
+        <item name="cardElevation">4dp</item>
+    </style>
+
+    <style name="BethesdaToolbar" parent="Widget.Material3.Toolbar">
         <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="titleCentered">true</item>
     </style>
 </resources>

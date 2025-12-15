@@ -1,15 +1,15 @@
-package com.example.eebb.ui.home
+package com.example.eebb.ui.events
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.eebb.databinding.FragmentHomeBinding
+import com.example.eebb.databinding.FragmentEventsBinding
 
-class HomeFragment : Fragment() {
+class EventsFragment : Fragment() {
 
-    private var _binding: FragmentHomeBinding? = null
+    private var _binding: FragmentEventsBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -17,7 +17,7 @@ class HomeFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentHomeBinding.inflate(inflater, container, false)
+        _binding = FragmentEventsBinding.inflate(inflater, container, false)
         return binding.root
     }
 
