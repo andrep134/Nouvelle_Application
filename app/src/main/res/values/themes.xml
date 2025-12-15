@@ -13,7 +13,6 @@
         <item name="materialCardViewStyle">@style/BethesdaCard</item>
         <item name="toolbarStyle">@style/BethesdaToolbar</item>
         <item name="android:navigationBarDividerColor">@color/background_light</item>
-        <item name="android:statusBarContrastEnforced">false</item>
     </style>
 
     <style name="BethesdaCard" parent="Widget.Material3.CardView.Elevated">
