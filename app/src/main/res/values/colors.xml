@@ -26,6 +26,8 @@
     <!-- Brand palette -->
     <color name="brand_maroon">@color/bethesda_red</color>
     <color name="brand_gold">@color/color_gold_muted</color>
+    <color name="brand_green">@color/bethesda_green</color>
+    <color name="sand_tint">@color/color_soft_beige</color>
 
     <!-- Text and surfaces -->
     <color name="text_primary">@color/color_on_background</color>
