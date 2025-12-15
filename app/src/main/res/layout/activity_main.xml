@@ -9,14 +9,14 @@
         android:id="@+id/topAppBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingHorizontal="16dp"
-        android:paddingVertical="12dp"
+        android:paddingHorizontal="18dp"
+        android:paddingVertical="14dp"
         android:background="@color/color_background"
         app:title="@string/church_title"
         app:titleCentered="true"
         app:titleTextColor="@color/color_on_background"
         app:navigationIcon="@drawable/ic_nav_church"
-        app:navigationIconTint="@color/color_primary" />
+        app:navigationIconTint="@color/color_outline" />
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/nav_host_fragment"
@@ -32,7 +32,7 @@
         android:layout_width="match_parent"
         android:layout_height="88dp"
         android:layout_gravity="bottom"
-        android:background="@color/color_surface"
+        android:background="@drawable/bottom_nav_background"
         app:itemIconTint="@color/bottom_nav_selector"
         app:itemRippleColor="@color/bottom_nav_ripple"
         app:itemTextColor="@color/bottom_nav_selector"
