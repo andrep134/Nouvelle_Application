@@ -22,4 +22,17 @@
     <color name="color_card_navy_dark">#0E1F36</color>
     <color name="color_soft_beige">#F0E8DA</color>
     <color name="color_gold_muted">#C4A569</color>
+
+    <!-- Brand palette -->
+    <color name="brand_maroon">@color/bethesda_red</color>
+    <color name="brand_gold">@color/color_gold_muted</color>
+
+    <!-- Text and surfaces -->
+    <color name="text_primary">@color/color_on_background</color>
+    <color name="text_secondary">@color/color_secondary_gray</color>
+    <color name="sand_background">@color/color_soft_beige</color>
+    <color name="card_veil">#0D000000</color>
+
+    <!-- Navigation -->
+    <color name="bottom_nav_unselected">@color/text_secondary</color>
 </resources>
