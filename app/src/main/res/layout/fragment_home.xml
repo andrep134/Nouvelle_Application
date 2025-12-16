@@ -1,291 +1,210 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:fillViewport="true"
-    android:background="@color/background_light">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <LinearLayout
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.eebb.ui.home.HomeViewModel" />
+    </data>
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="16dp"
-        android:paddingBottom="32dp">
+        android:layout_height="match_parent"
+        android:background="@color/background_light"
+        android:fillViewport="true">
 
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
-            android:layout_height="240dp"
-            android:foreground="?attr/colorControlHighlight"
-            app:cardCornerRadius="16dp"
-            app:cardElevation="6dp"
-            app:cardUseCompatPadding="true">
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
 
-            <FrameLayout
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:contentDescription="Image de couverture"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/hero_background" />
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="#80000000" />
+                android:layout_height="wrap_content"
+                android:background="@color/bethesda_red"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="0dp"
+                app:cardPreventCornerOverlap="true"
+                app:cardUseCompatPadding="false"
+                app:strokeColor="@color/bethesda_red"
+                app:strokeWidth="0dp">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:padding="20dp">
+                    android:layout_height="200dp"
+                    android:padding="16dp">
 
                     <TextView
-                        android:id="@+id/home_hero_title"
+                        android:id="@+id/home_title"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Culte du dimanche"
-                        android:textColor="@color/white"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="@{viewModel.heroEvent.title}"
+                        android:textColor="@color/bethesda_green"
                         android:textSize="24sp"
                         android:textStyle="bold"
-                        app:layout_constraintBottom_toTopOf="@+id/home_hero_subtitle"
-                        app:layout_constraintStart_toStartOf="parent" />
+                        app:layout_constraintBottom_toTopOf="@+id/home_subtitle"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="Culte en présentiel + Live" />
 
                     <TextView
-                        android:id="@+id/home_hero_subtitle"
+                        android:id="@+id/home_subtitle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
-                        android:text="Dimanche 10h00 • Temple principal"
-                        android:textColor="@color/white"
-                        android:textSize="14sp"
-                        app:layout_constraintBottom_toTopOf="@+id/home_hero_cta"
-                        app:layout_constraintStart_toStartOf="parent" />
-
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/home_hero_cta"
-                        style="@style/Widget.MaterialComponents.Button"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="12dp"
-                        android:text="Rejoindre le direct"
-                        app:icon="@drawable/ic_play_circle"
-                        app:iconPadding="8dp"
+                        android:layout_marginTop="8dp"
+                        android:text="@{viewModel.heroEvent.schedule + ' • ' + viewModel.heroEvent.location}"
+                        android:textColor="@color/bethesda_green"
+                        android:textSize="16sp"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent" />
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/home_title"
+                        tools:text="Dimanche | 10h00 • 6715 16e Ave, Montréal" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
-
-            </FrameLayout>
-
-        </com.google.android.material.card.MaterialCardView>
-
-        <com.google.android.material.card.MaterialCardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:foreground="?attr/selectableItemBackground"
-            app:cardCornerRadius="14dp"
-            app:cardElevation="4dp"
-            app:strokeColor="@color/color_outline"
-            app:strokeWidth="1dp">
+            </com.google.android.material.card.MaterialCardView>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center_vertical"
-                android:orientation="vertical"
-                android:padding="16dp">
+                android:layout_marginTop="16dp"
+                android:orientation="vertical">
 
-                <LinearLayout
+                <com.google.android.material.card.MaterialCardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:contentDescription="Icône message"
-                        android:src="@drawable/ic_play_circle" />
+                    android:layout_marginBottom="12dp"
+                    app:cardElevation="2dp"
+                    app:strokeColor="@color/bethesda_red"
+                    app:strokeWidth="1dp">
 
                     <LinearLayout
-                        android:layout_width="0dp"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="12dp"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        android:padding="16dp">
 
                         <TextView
-                            android:id="@+id/home_latest_message_title"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Dernier message"
-                            android:textColor="@color/color_on_background"
+                            android:text="Dernier Message"
+                            android:textColor="@color/bethesda_red"
                             android:textSize="18sp"
                             android:textStyle="bold" />
 
                         <TextView
-                            android:id="@+id/home_latest_message_subtitle"
+                            android:id="@+id/latest_sermon_title"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="2dp"
-                            android:text="Série: Foi en action • 42 min"
-                            android:textColor="@color/text_secondary" />
-                    </LinearLayout>
-
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/home_latest_message_more"
-                        style="@style/Widget.MaterialComponents.Button.TextButton"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Voir plus" />
-                </LinearLayout>
-
-            </LinearLayout>
-        </com.google.android.material.card.MaterialCardView>
-
-        <com.google.android.material.card.MaterialCardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:foreground="?attr/selectableItemBackground"
-            app:cardCornerRadius="14dp"
-            app:cardElevation="4dp"
-            app:strokeColor="@color/color_outline"
-            app:strokeWidth="1dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_vertical"
-                android:orientation="vertical"
-                android:padding="16dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:contentDescription="Icône verset"
-                        android:src="@drawable/ic_prayer" />
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="12dp"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
+                            android:layout_marginTop="8dp"
+                            android:text="@{viewModel.sermons.size() > 0 ? viewModel.sermons[0].title : 'Aucun message disponible'}"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold"
+                            tools:text="Espérance vivante" />
 
                         <TextView
-                            android:id="@+id/home_verse_reference"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Psaume 23:1"
-                            android:textColor="@color/color_on_background"
-                            android:textSize="18sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/home_verse_text"
+                            android:id="@+id/latest_sermon_meta"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="4dp"
-                            android:text="L'Éternel est mon berger: je ne manquerai de rien."
-                            android:textColor="@color/color_on_background" />
+                            android:text="@{viewModel.sermons.size() > 0 ? viewModel.sermons[0].speaker + ' • ' + viewModel.sermons[0].publishedOn : 'Revenez bientôt pour un nouveau message'}"
+                            android:textColor="@android:color/black"
+                            tools:text="Pasteur principal • Dimanche 10 nov." />
+
                     </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
 
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/home_verse_cta"
-                        style="@style/Widget.MaterialComponents.Button.TextButton"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Lire" />
-                </LinearLayout>
-
-            </LinearLayout>
-        </com.google.android.material.card.MaterialCardView>
-
-        <com.google.android.material.card.MaterialCardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:foreground="?attr/selectableItemBackground"
-            app:cardCornerRadius="14dp"
-            app:cardElevation="4dp"
-            app:strokeColor="@color/color_outline"
-            app:strokeWidth="1dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="16dp">
-
-                <LinearLayout
+                <com.google.android.material.card.MaterialCardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:contentDescription="Icône événement"
-                        android:src="@drawable/ic_calendar_star" />
+                    android:layout_marginBottom="12dp"
+                    app:cardBackgroundColor="@color/bethesda_green"
+                    app:cardElevation="2dp">
 
                     <LinearLayout
-                        android:layout_width="0dp"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="12dp"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        android:padding="16dp">
 
                         <TextView
-                            android:id="@+id/home_events_title"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Prochains événements"
-                            android:textColor="@color/color_on_background"
+                            android:text="Verset du Jour"
+                            android:textColor="@color/white"
                             android:textSize="18sp"
                             android:textStyle="bold" />
 
                         <TextView
-                            android:id="@+id/home_events_subtitle"
+                            android:id="@+id/verse_of_day"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="2dp"
-                            android:text="Samedi 18 mai • Centre Bethesda"
-                            android:textColor="@color/color_on_background" />
+                            android:layout_marginTop="8dp"
+                            android:text="@{viewModel.verse.first}"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            tools:text="L’Éternel est mon berger : je ne manquerai de rien." />
+
+                        <TextView
+                            android:id="@+id/verse_reference"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="@{viewModel.verse.second}"
+                            android:textColor="@color/white"
+                            tools:text="Psaume 23:1" />
+
                     </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
 
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/home_events_more"
-                        style="@style/Widget.MaterialComponents.Button.TextButton"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Voir l'agenda" />
-                </LinearLayout>
-
-                <com.google.android.material.chip.Chip
-                    android:id="@+id/home_event_type"
-                    style="@style/Widget.MaterialComponents.Chip.Assist"
-                    android:layout_width="wrap_content"
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
-                    android:text="Concert de louange"
-                    app:chipIcon="@drawable/ic_nav_church"
-                    app:iconStartPadding="8dp" />
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Prochains Événements"
+                            android:textColor="@color/bethesda_red"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/next_event_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="@{viewModel.upcomingEvents.size() > 0 ? viewModel.upcomingEvents[0].title : 'Aucun événement à venir'}"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold"
+                            tools:text="Culte en présentiel + Live" />
+
+                        <TextView
+                            android:id="@+id/next_event_meta"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="@{viewModel.upcomingEvents.size() > 0 ? viewModel.upcomingEvents[0].schedule + ' • ' + viewModel.upcomingEvents[0].location : 'Restez connectés aux prochaines nouvelles'}"
+                            android:textColor="@android:color/black"
+                            tools:text="Dimanche | 10h00 • 6715 16e Ave, Montréal" />
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
 
             </LinearLayout>
-        </com.google.android.material.card.MaterialCardView>
 
-    </LinearLayout>
-
-</androidx.core.widget.NestedScrollView>
+        </LinearLayout>
+    </ScrollView>
+</layout>

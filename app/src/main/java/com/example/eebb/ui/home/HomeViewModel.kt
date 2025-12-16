@@ -15,5 +15,8 @@ class HomeViewModel : ViewModel() {
     private val _highlights = MutableLiveData(SampleContent.highlights)
     val highlights: LiveData<List<com.example.eebb.ui.model.Highlight>> = _highlights
 
+    private val _upcomingEvents = MutableLiveData(SampleContent.upcomingEvents)
+    val upcomingEvents: LiveData<List<com.example.eebb.ui.model.Event>> = _upcomingEvents
+
     val verse = SampleContent.heroVerse
 }
