@@ -15,32 +15,30 @@
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/bethesda_red"
+            android:layout_marginBottom="16dp"
+            android:background="@color/color_surface"
             app:cardCornerRadius="20dp"
             app:cardElevation="0dp"
             app:cardUseCompatPadding="false"
             app:cardPreventCornerOverlap="true"
             app:strokeColor="@color/bethesda_red"
-            app:strokeWidth="0dp">
+            app:strokeWidth="1dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
-                android:padding="16dp">
+                android:padding="20dp">
 
                 <TextView
                     android:id="@+id/home_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="BIENVENUE À LA MAISON"
-                    android:textColor="@color/bethesda_green"
-                    android:textSize="24sp"
-                    android:textStyle="bold"
-                    android:fontFamily="sans-serif-medium"
+                    android:textColor="@color/text_primary"
+                    style="@style/TextTitle"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent" />
+                    app:layout_constraintStart_toStartOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </com.google.android.material.card.MaterialCardView>
@@ -63,22 +61,21 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:padding="16dp">
+                    android:padding="18dp">
 
                     <TextView
+                        style="@style/TextTitle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Dernier Message"
-                        android:textStyle="bold"
-                        android:textSize="18sp"
                         android:textColor="@color/bethesda_red" />
 
                     <TextView
+                        style="@style/TextBody"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
-                        android:text="Découvrez le dernier enseignement inspirant de notre église."
-                        android:textColor="@android:color/black" />
+                        android:text="Découvrez le dernier enseignement inspirant de notre église." />
 
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
@@ -87,29 +84,28 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="12dp"
-                app:cardBackgroundColor="@color/bethesda_green"
+                app:cardBackgroundColor="@color/white"
                 app:cardElevation="2dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:padding="16dp">
+                    android:padding="18dp">
 
                     <TextView
+                        style="@style/TextTitle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Verset du Jour"
-                        android:textStyle="bold"
-                        android:textSize="18sp"
-                        android:textColor="@color/white" />
+                        android:textColor="@color/bethesda_green" />
 
                     <TextView
+                        style="@style/TextSubtitle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
-                        android:text="« Car Dieu a tant aimé le monde... »"
-                        android:textColor="@color/white" />
+                        android:text="« Car Dieu a tant aimé le monde... »" />
 
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
@@ -117,28 +113,28 @@
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
                 app:cardElevation="2dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:padding="16dp">
+                    android:padding="18dp">
 
                     <TextView
+                        style="@style/TextTitle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Prochains Événements"
-                        android:textStyle="bold"
-                        android:textSize="18sp"
                         android:textColor="@color/bethesda_red" />
 
                     <TextView
+                        style="@style/TextBody"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
-                        android:text="Restez connectés aux rencontres et activités à venir."
-                        android:textColor="@android:color/black" />
+                        android:text="Restez connectés aux rencontres et activités à venir." />
 
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
