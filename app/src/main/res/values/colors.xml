@@ -2,12 +2,13 @@
 <resources>
     <color name="bethesda_red">#5C0000</color>
     <color name="bethesda_green">#79C842</color>
-    <color name="background_light">#F9F9F9</color>
+    <color name="background_light">#F0E8DA</color>
     <color name="white">#FFFFFF</color>
 
     <!-- Legacy palette kept for compatibility across layouts -->
     <color name="color_primary">@color/bethesda_red</color>
     <color name="color_primary_dark">#4A0000</color>
+    <color name="bethesda_red_dark">#3D0000</color>
     <color name="color_primary_light">#8A2E2E</color>
     <color name="color_background">@color/background_light</color>
     <color name="color_surface">@color/white</color>
@@ -32,6 +33,7 @@
     <!-- Text and surfaces -->
     <color name="text_primary">@color/color_on_background</color>
     <color name="text_secondary">@color/color_secondary_gray</color>
+    <color name="text_light">#D9D9D9</color>
     <color name="sand_background">@color/color_soft_beige</color>
     <color name="card_veil">#0D000000</color>
 
