@@ -35,7 +35,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-medium"
-                    android:text="Église Béthel"
+                    android:text="Église Baptiste Évangélique Bethesda"
                     android:textColor="@color/white"
                     android:textSize="20sp"
                     app:layout_constraintStart_toStartOf="parent"
@@ -58,7 +58,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:text="ÉGLISE ÉVANGÉLIQUE BAPTISTE BÉTHEL, MONTRÉAL"
+                    android:text="ÉGLISE BAPTISTE ÉVANGÉLIQUE BETHESDA, MONTRÉAL"
                     android:textColor="@color/text_light"
                     android:textSize="12sp"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -162,7 +162,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="6dp"
-                                android:text="Pasteur Jean Dupont - 15 Mai 2024"
+                                android:text="Pasteur Jean-Palma Lindor"
                                 android:textColor="@color/text_secondary"
                                 android:textSize="13sp" />
 
