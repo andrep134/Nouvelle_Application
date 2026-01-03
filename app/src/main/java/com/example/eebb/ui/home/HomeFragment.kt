@@ -1,5 +1,7 @@
 package com.example.eebb.ui.home
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -24,6 +26,10 @@ class HomeFragment : Fragment() {
         _binding = DataBindingUtil.inflate(inflater, R.layout.fragment_home, container, false)
         binding.viewModel = homeViewModel
         binding.lifecycleOwner = viewLifecycleOwner
+        binding.heroCta.setOnClickListener {
+            val liveUri = Uri.parse("https://www.youtube.com/@egliseevangeliquebaptisteb4650/live")
+            startActivity(Intent(Intent.ACTION_VIEW, liveUri))
+        }
         return binding.root
     }
 
