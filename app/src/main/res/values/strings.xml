@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Église Bethesda</string>
-    <string name="church_title">Église Évangélique Baptiste Bethesda</string>
+    <string name="app_name">Église Baptiste Évangélique Bethesda</string>
+    <string name="church_title">Église Baptiste Évangélique Bethesda</string>
     <string name="church_motto">Dieu est fidèle</string>
     <string name="church_intro">Communauté francophone à Montréal, enracinée dans la Bible et tournée vers la ville.</string>
-    <string name="service_times">Culte en présentiel et en direct YouTube chaque dimanche à 10h00</string>
+    <string name="service_times">Culte en présentiel et en direct YouTube chaque dimanche à 11h00</string>
 
     <string name="home_hero_headline">Bienvenue à la maison</string>
     <string name="home_hero_subheadline">Une communauté chaleureuse, moderne et ancrée dans la foi.</string>
@@ -15,7 +15,7 @@
     <string name="home_latest_sermon_desc">Message inspirant disponible en vidéo et podcast.</string>
     <string name="home_media_cta">Regarder maintenant</string>
     <string name="home_upcoming_service">Culte du dimanche</string>
-    <string name="home_service_time">Ce dimanche • 10h00</string>
+    <string name="home_service_time">Ce dimanche • 11h00</string>
     <string name="home_upcoming_service_desc">Louange, prière et accueil pour toute la famille.</string>
     <string name="home_service_cta">Ajouter à mon agenda</string>
     <string name="home_verse_title">Verset du jour</string>
@@ -70,7 +70,7 @@
     <string name="location_button">Voir l’itinéraire</string>
 
     <string name="event_main_title">Culte du dimanche</string>
-    <string name="event_main_time">Chaque dimanche à 10h00</string>
+    <string name="event_main_time">Chaque dimanche à 11h00</string>
     <string name="event_main_desc">Louange, prière et message pour toute la famille.</string>
 
     <string name="event_prayer_title">Réunion de prière</string>
@@ -107,9 +107,9 @@
     <string name="church_vision">Vision : une Église vivante qui fait des disciples et rayonne dans la ville.</string>
     <string name="church_ministries">Ministères : Louange, Jeunesse, Accueil, Médias &amp; Live, Visites, Mission.</string>
     <string name="church_contact">Contact : info@eebbethesda.com</string>
-    <string name="church_address">Adresse : 6715 16e Ave, Montréal, QC</string>
+    <string name="church_address">Adresse : 7012 1ère Ave, Montréal</string>
     <string name="church_donate">Soutenir l’Église</string>
-    <string name="church_schedule">Horaires : dimanche 10h00 | mercredi prière 19h30 | vendredi jeunesse 20h00</string>
+    <string name="church_schedule">Horaires : dimanche 11h00</string>
 
     <string name="nav_home">Accueil</string>
     <string name="nav_calendar">Calendrier</string>
@@ -117,7 +117,7 @@
     <string name="nav_prayer">Prière</string>
     <string name="nav_church">Église</string>
 
-    <string name="location_query">Église Évangélique Baptiste Béthesda Montréal</string>
+    <string name="location_query">Église Baptiste Évangélique Bethesda Montréal</string>
     <string name="contact_email">info@eebbethesda.com</string>
     <string name="prayer_email">priere@eebbethesda.com</string>
     <string name="email_subject">Contact depuis l’application Bethesda</string>
@@ -160,13 +160,13 @@
     <!-- Last Sermon Section -->
     <string name="last_sermon_label">Dernier sermon</string>
     <string name="last_sermon_title">Le pouvoir de la foi</string>
-    <string name="last_sermon_subtitle">Pasteur (à configurer)</string>
+    <string name="last_sermon_subtitle">Pasteur Jean-Palma Lindor</string>
     <string name="watch">Regarder</string>
 
     <!-- Upcoming Events Section -->
     <string name="next_events_label">Prochains événements</string>
     <string name="next_events_title">Culte du dimanche</string>
-    <string name="next_events_time">Dimanche 10h</string>
+    <string name="next_events_time">Dimanche 11h</string>
 
     <!-- Verse of the Day Section -->
     <string name="verse_label">Verset du jour</string>

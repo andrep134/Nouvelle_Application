@@ -31,8 +31,8 @@ object SampleContent {
 
     val featuredEvent = Event(
         title = "Culte en présentiel + Live",
-        schedule = "Dimanche | 10h00",
-        location = "6715 16e Ave, Montréal",
+        schedule = "Dimanche | 11h00",
+        location = "7012 1ère Ave, Montréal",
         description = "Louange, enseignement et prière pour toute la famille.",
         highlight = true
     )
