@@ -30,6 +30,30 @@
                 android:background="@drawable/hero_gradient"
                 android:padding="20dp">
 
+                <ImageView
+                    android:id="@+id/hero_logo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:padding="16dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/logo_bethesda"
+                    android:tint="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/hero_slogan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Dieu est fidèle"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/hero_logo" />
+
                 <TextView
                     android:id="@+id/hero_brand"
                     android:layout_width="wrap_content"
@@ -39,17 +63,16 @@
                     android:textColor="@color/white"
                     android:textSize="20sp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toBottomOf="@id/hero_slogan" />
 
                 <TextView
                     android:id="@+id/hero_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:text="BIENVENUE"
+                    android:text="7012 1ère Ave, Montréal"
                     android:textColor="@color/white"
-                    android:textSize="32sp"
-                    android:textStyle="bold"
+                    android:textSize="16sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/hero_brand" />
 
@@ -58,9 +81,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:text="ÉGLISE BAPTISTE ÉVANGÉLIQUE BETHESDA, MONTRÉAL"
+                    android:text="Culte le dimanche à 11h00"
                     android:textColor="@color/text_light"
                     android:textSize="12sp"
+                    android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/hero_title" />
